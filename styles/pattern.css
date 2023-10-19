@@ -1,0 +1,100 @@
+/* 
+  CSS Variables 
+*/
+
+:root {
+  /* Colors */
+  --color-primary: #ffbd59;
+  --color-medium: #f99d1c;
+  --color-black: #000000;
+  --color-success: #5ebb47;
+  --color-error: #ec4724;
+
+  /* Fonts */
+  --font-primary: "Signika Negative", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+
+  --font-weight-thin: 300;
+  --font-weight-bold: 700;
+
+  --font-size-xxs: 0.7rem;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.4rem;
+  --font-size-xxl: 1.6rem;
+}
+
+/* Guidelines: Typography */
+
+.text-primary-font {
+  font-family: var(--font-primary);
+}
+
+.text-secondary-font {
+  font-family: var(--font-secondary);
+}
+
+.text-xxs {
+  font-size: var(--font-size-xxs);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.text-thin {
+  font-weight: var(--font-weight-thin);
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* UI Components: Loader */
+
+.loader-sm,
+.loader-md,
+.loader-lg {
+  background-image: url(../images/loader.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation: loader 0.75s normal infinite linear;
+}
+
+.loader-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.loader-md {
+  width: 50px;
+  height: 50px;
+}
+
+.loader-lg {
+  width: 70px;
+  height: 70px;
+}
