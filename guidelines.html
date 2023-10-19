@@ -23,6 +23,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/pattern.css" />
   </head>
   <body>
     <header>
@@ -223,24 +224,118 @@
                   risus, eu porta neque dolor non tortor.
                 </p>
 
-                <p>
-                  Etiam hendrerit eros nec nibh gravida lobortis. Duis eu
-                  maximus lorem, sed pulvinar nibh. Donec condimentum sem nec
-                  augue cursus varius. Ut id placerat felis. Vestibulum ut arcu
-                  sem.
-                </p>
+                <div class="accordion mb-5" id="primary-font-use-case">
+                  <div class="accordion-item">
+                    <p class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#typography-heading"
+                        aria-expanded="true"
+                        aria-controls="typography-heading"
+                      >
+                        <div class="align-items-center">Use Case: Headings</div>
+                      </button>
+                    </p>
+                    <div
+                      id="typography-heading"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#primary-font-use-case"
+                    >
+                      <div class="accordion-body">
+                        <p class="text-primary-font h1 mb-3">
+                          <span class="text-bold">This is h1 heading.</span>
+                        </p>
 
-                <p class="display-6">
+                        <p class="text-primary-font h2 mb-3">
+                          <span class="text-bold">This is h2 heading.</span>
+                        </p>
+
+                        <p class="text-primary-font h3">
+                          <span class="text-bold">This is h3 heading.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#typography-nav"
+                        aria-expanded="false"
+                        aria-controls="typography-nav"
+                      >
+                        <div class="align-items-center">
+                          Use Case: Navigation
+                        </div>
+                      </button>
+                    </p>
+                    <div
+                      id="typography-nav"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#primary-font-use-case"
+                    >
+                      <p class="text-primary-font pt-3 ps-3">
+                        <span class="me-3">Navigation Link 1</span>
+                        <span class="text-bold me-3"
+                          >Active Navigation Link</span
+                        >
+                        <span class="me-3">Navigation Link 3</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="display-6 mb-5">
                   <span class="font-name-highlight">Montserrat</span> is our
                   supporting font.
                 </p>
+                <div>
+                  <p class="text-secondary-font text-xxs mb-3">
+                    <span class="text-thin">This is xxs thin text.</span> This
+                    is xxs regular text.
+                    <span class="text-bold">This is xxs bold text.</span>
+                  </p>
 
-                <p>
-                  Nam ut lacinia augue. Mauris ac pharetra purus. Etiam blandit
-                  non elit vel pharetra. In hac habitasse platea dictumst. Nam
-                  cursus congue ipsum ultricies pellentesque. Pellentesque
-                  porttitor euismod magna vitae sodales.
-                </p>
+                  <p class="text-secondary-font text-xs mb-3">
+                    <span class="text-thin">This is xs thin text.</span> This is
+                    xs regular text.
+                    <span class="text-bold">This is xs bold text.</span>
+                  </p>
+
+                  <p class="text-secondary-font text-sm mb-3">
+                    <span class="text-thin">This is sm thin text.</span> This is
+                    sm regular text.
+                    <span class="text-bold">This is sm bold text.</span>
+                  </p>
+
+                  <p class="text-secondary-font text-md mb-3">
+                    <span class="text-thin">This is md thin text.</span> This is
+                    md regular text.
+                    <span class="text-bold">This is md bold text.</span>
+                  </p>
+
+                  <p class="text-secondary-font text-lg mb-3">
+                    <span class="text-thin">This is lg thin text.</span> This is
+                    lg regular text.
+                    <span class="text-bold">This is lg bold text.</span>
+                  </p>
+
+                  <p class="text-secondary-font text-xl mb-3">
+                    <span class="text-thin">This is xl thin text.</span> This is
+                    xl regular text.
+                    <span class="text-bold">This is xl bold text.</span>
+                  </p>
+
+                  <p class="text-secondary-font text-xxl mb-5">
+                    <span class="text-thin">This is xxl thin text.</span> This
+                    is xxl regular text.
+                    <span class="text-bold">This is xxl bold text.</span>
+                  </p>
+                </div>
               </div>
 
               <!-- Page Layout Page -->

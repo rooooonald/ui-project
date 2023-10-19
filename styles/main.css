@@ -1,24 +1,8 @@
 /* 
   Imports 
 */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Signika+Negative:wght@300;400;700&display=swap");
-
-/* 
-  CSS Variables 
-*/
-
-:root {
-  /* Colors */
-  --color-primary: #ffbd59;
-  --color-medium: #f99d1c;
-  --color-black: #000000;
-  --color-success: #5ebb47;
-  --color-error: #ec4724;
-
-  /* Fonts */
-  --font-primary: "Signika Negative", sans-serif;
-  --font-secondary: "Montserrat", sans-serif;
-}
 
 /* 
   Global Elements 
@@ -217,9 +201,26 @@ button {
   font-weight: 400;
 }
 
+#typography-nav p {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* 
+  UI Components 
+*/
+
+.badge-style {
+  background-color: var(--color-medium);
+  color: var(--color-black);
+  font-family: var(--font-secondary) !important;
+}
+
 /* 
   Bootstrap Classes 
 */
+
+/* Navbar */
 
 .nav-link {
   color: var(--color-primary);
@@ -245,6 +246,31 @@ button {
 
 .nav-pills .nav-link.active:hover {
   color: white !important;
+}
+
+/* Accordion */
+
+.accordion-item {
+  border-color: var(--color-primary);
+}
+
+.accordion-button {
+  color: var(--color-black);
+  background-color: var(--color-primary);
+  box-shadow: none;
+  padding: 5px;
+}
+
+.accordion-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--color-black);
+  background-color: var(--color-primary);
+  box-shadow: none;
 }
 
 /* 
@@ -376,35 +402,4 @@ button {
     letter-spacing: 5px;
     animation: none;
   }
-}
-
-.loader-sm,
-.loader-md,
-.loader-lg {
-  background-image: url(../images/loader.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  animation: loader 0.75s normal infinite linear;
-}
-
-.loader-sm {
-  width: 30px;
-  height: 30px;
-}
-
-.loader-md {
-  width: 50px;
-  height: 50px;
-}
-
-.loader-lg {
-  width: 70px;
-  height: 70px;
-}
-
-.badge-style {
-  background-color: var(--color-medium);
-  color: var(--color-black);
-  font-family: var(--font-secondary) !important;
 }
