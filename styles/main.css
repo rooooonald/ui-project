@@ -36,6 +36,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  color: var(--color-primary);
+}
+
 th {
   color: var(--color-primary) !important;
 }
@@ -150,6 +154,22 @@ code {
 
 .heading {
   animation: text-regroup 1.5s forwards normal ease;
+}
+
+/* Intro */
+
+.getting-started-download-btn:hover {
+  animation: shake 0.5s 1 forwards normal;
+}
+
+.getting-started-download-btn {
+  width: 200px;
+  padding: 10px 0;
+  background-color: var(--color-primary);
+}
+
+.getting-started-download-btn:hover {
+  animation: shake 0.5s 1 forwards normal;
 }
 
 /* Colors */
