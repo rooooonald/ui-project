@@ -24,6 +24,7 @@
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/pattern.css" />
+    <link rel="stylesheet" href="./styles/prism.css" />
   </head>
   <body>
     <header>
@@ -128,7 +129,9 @@
                 tabindex="0"
               >
                 <div class="container-fluid">
-                  <h2 class="heading">Primary Color</h2>
+                  <h2 class="heading">
+                    <span class="text-color-primary">Primary</span> Color
+                  </h2>
                   <div class="row mb-3">
                     <div>
                       <div class="card color-block my-3">
@@ -144,7 +147,9 @@
                       </div>
                     </div>
                   </div>
-                  <h2 class="heading">Secondary Colors</h2>
+                  <h2 class="heading">
+                    <span class="text-color-primary">Secondary</span> Colors
+                  </h2>
                   <div class="row mb-3">
                     <div class="col-sm-6 col-xl-4">
                       <div class="card color-block my-3">
@@ -170,7 +175,9 @@
                     </div>
                   </div>
 
-                  <h2 class="heading">Feedback Colors</h2>
+                  <h2 class="heading">
+                    <span class="text-color-primary">Feedback</span> Colors
+                  </h2>
                   <div class="row mb-3">
                     <div class="col-sm-6 col-xl-4">
                       <div class="card color-block my-3">
@@ -311,11 +318,11 @@
                   supporting font.
                 </p>
 
-                <p mb-3>
+                <p class="mb-3">
                   It is mainly used for body text by using
                   <code>.text-secondary-font</code>. To adjust font weight, use
-                  <code>.text-thin</code> and <code>.text-bold</code> . To
-                  adjust font size, use <code>.text-[size]</code>.
+                  <code>.text-thin</code> and <code>.text-bold</code>. To adjust
+                  font size, use <code>.text-[size]</code>.
                 </p>
 
                 <div>
@@ -371,7 +378,251 @@
                 aria-labelledby="v-pills-page-layout-tab"
                 tabindex="0"
               >
-                This is the page layout page.
+                <h1 class="heading mb-3">
+                  <span class="heading-grid">Grid</span>
+                  <span class="heading-grid">System</span>
+                </h1>
+                <p class="mb-3">
+                  Our grid system is composed of 12 flexible columns.
+                </p>
+
+                <p class="h4">Size 1 of 1</p>
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 1
+                    </div>
+                  </div>
+                </div>
+
+                <p class="h4">Size 1 of 2</p>
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col-md-6 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 2
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 2
+                    </div>
+                  </div>
+                </div>
+
+                <p class="h4">Size 1 of 3</p>
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col-md-4 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 3
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 3
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 3
+                    </div>
+                  </div>
+                </div>
+
+                <p class="h4">Size 1 of 4</p>
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                </div>
+
+                <p class="h4">Size 1 of 6</p>
+                <div class="row p-2 mb-5 grid-outer">
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col-md-4">
+                    <p class="h4">Notes</p>
+                    <p class="mb-3">
+                      Column classes indicate the number of columns to span
+                      (e.g. <code>.col-4</code> spans four). To adjust the gap
+                      size between columns, we use <code>.p-*</code>.
+                    </p>
+                  </div>
+                  <div class="col-md-8">
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="row">
+  &lt;div class="col-4 p-2">&lt;/div>
+  &lt;div class="col-4 p-2">&lt;/div>
+  &lt;div class="col-4 p-2">&lt;/div>
+&lt;/div></code></pre>
+                  </div>
+                </div>
+
+                <h2 class="heading mb-3">
+                  <span class="heading-grid">Mixed</span>
+                  <span class="heading-grid">Grids</span>
+                </h2>
+                <p class="mb-3">
+                  The grid layout is easily extended by mixing different column
+                  sizes.
+                </p>
+
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col-md-4 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 3
+                    </div>
+                  </div>
+                  <div class="col-md-8 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      2 / 3
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row p-2 mb-3 grid-outer">
+                  <div class="col-md-10 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      5 / 6
+                    </div>
+                  </div>
+                  <div class="col-md-2 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 6
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row p-2 mb-5 grid-outer">
+                  <div class="col-md-6 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 2
+                    </div>
+                  </div>
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col-md-4">
+                    <p class="h4">Notes</p>
+                    <p class="mb-3">
+                      To achieve full width, the number of columns should add up
+                      to 12.
+                    </p>
+                  </div>
+                  <div class="col-md-8">
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="row">
+  &lt;div class="col-6 p-2">&lt;/div>
+  &lt;div class="col-3 p-2">&lt;/div>
+  &lt;div class="col-3 p-2">&lt;/div>
+&lt;/div></code></pre>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -383,5 +634,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/prism.js"></script>
   </body>
 </html>
