@@ -322,7 +322,7 @@
                   It is mainly used for body text by using
                   <code>.text-secondary-font</code>. To adjust font weight, use
                   <code>.text-thin</code> and <code>.text-bold</code>. To adjust
-                  font size, use <code>.text-[size]</code>.
+                  font size, use <code>.text-*size</code>.
                 </p>
 
                 <div>
@@ -623,6 +623,120 @@
 &lt;/div></code></pre>
                   </div>
                 </div>
+
+                <h2 class="heading mb-3">
+                  <span class="heading-grid">Breakpoints</span>
+                </h2>
+                <p class="mb-3">
+                  Breakpoints are customizable widths that determine how your
+                  responsive layout behaves across device or viewport sizes.
+                </p>
+
+                <table class="table table-hover mb-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">Breakpoint</th>
+                      <th scope="col">Class Infix</th>
+                      <th scope="col">Dimensions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Extra Small</td>
+                      <td><em>None</em></td>
+                      <td>&lt;576px</td>
+                    </tr>
+                    <tr>
+                      <td>Small</td>
+                      <td><code>sm</code></td>
+                      <td>≥576px</td>
+                    </tr>
+                    <tr>
+                      <td>Medium</td>
+                      <td><code>md</code></td>
+                      <td colspan="2">≥768px</td>
+                    </tr>
+                    <tr>
+                      <td>Large</td>
+                      <td><code>lg</code></td>
+                      <td>≥992px</td>
+                    </tr>
+                    <tr>
+                      <td>Extra Large</td>
+                      <td><code>xl</code></td>
+                      <td>≥1200px</td>
+                    </tr>
+                    <tr>
+                      <td>Double Extra Large</td>
+                      <td><code>xxl</code></td>
+                      <td>≥1400px</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2 class="heading mb-3">
+                  <span class="heading-grid">Responsive Grids</span>
+                </h2>
+                <p class="mb-3">
+                  Combined breakpoints with grids, we can determine column width
+                  depending on viewport width by using
+                  <code>.col-*breakpoint-*columnsToSpan</code>.
+                </p>
+
+                <div class="row p-2 mb-5 grid-outer">
+                  <div class="col-sm-6 col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3 p-2">
+                    <div
+                      class="d-flex grid-inner align-items-center justify-content-center"
+                    >
+                      1 / 4
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col-md-4">
+                    <p class="h4">Example</p>
+                    <p class="mb-3">
+                      Here when the viewport width reaches the
+                      <code>sm</code> breakpoint, each element would span 6
+                      columns. When the <code>md</code> breakpoint is reached,
+                      each element would span 3 columns.
+                    </p>
+                  </div>
+                  <div class="col-md-8">
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="row">
+  &lt;div class="col-sm-6 col-md-3 p-2">&lt;/div>
+  &lt;div class="col-sm-6 col-md-3 p-2">&lt;/div>
+  &lt;div class="col-sm-6 col-md-3 p-2">&lt;/div>
+  &lt;div class="col-sm-6 col-md-3 p-2">&lt;/div>
+&lt;/div></code></pre>
+                  </div>
+                </div>
+
+                <!-- Break -->
               </div>
             </div>
           </div>
