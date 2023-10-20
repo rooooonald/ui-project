@@ -72,6 +72,14 @@
   font-weight: var(--font-weight-bold);
 }
 
+.text-color-primary {
+  color: var(--color-primary);
+}
+
+.text-color-medium {
+  color: var(--color-medium);
+}
+
 /* UI Components: Loader */
 
 .loader-sm,
@@ -97,4 +105,20 @@
 .loader-lg {
   width: 70px;
   height: 70px;
+}
+
+/* Animations */
+
+@keyframes loader {
+  0% {
+    transform: scale(0.8) rotate(0);
+  }
+
+  50% {
+    transform: scale(1.5) rotate(270deg);
+  }
+
+  100% {
+    transform: scale(0.8) rotate(360deg);
+  }
 }
