@@ -107,6 +107,28 @@
   height: 70px;
 }
 
+/* UI Components: Modal */
+
+.modal-content {
+  background-color: var(--color-primary);
+  border: none;
+  animation: shake 0.5s normal forwards;
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
+}
+
+.modal-footer button {
+  background-color: var(--color-medium);
+}
+
+.modal-footer button:hover {
+  background-color: var(--color-black);
+  color: var(--color-medium);
+}
+
 /* Animations */
 
 @keyframes loader {
@@ -120,5 +142,20 @@
 
   100% {
     transform: scale(0.8) rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

@@ -43,6 +43,10 @@ button {
   outline: none;
 }
 
+code {
+  color: var(--color-medium);
+}
+
 /* 
   Index Page 
 */
@@ -314,21 +318,6 @@ button {
 /* 
   Animations
 */
-
-@keyframes shake {
-  0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(-2.5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 @keyframes text-regroup {
   from {

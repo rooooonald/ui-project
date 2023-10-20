@@ -205,6 +205,9 @@
               >
                 This is the card page.
               </div>
+
+              <!-- Modal -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-modal"
@@ -212,8 +215,116 @@
                 aria-labelledby="v-pills-modal-tab"
                 tabindex="0"
               >
-                This is the modal page.
+                <h1>Modal</h1>
+                <p>
+                  We use modals displaying information or tips throughout the
+                  dashboard.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-4 mb-5">
+                    <p class="h4 mb-3">Example</p>
+
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#ui-modal"
+                    >
+                      SHOW MODAL
+                    </button>
+                  </div>
+                  <div class="col-md-8">
+                    <p class="h5 mb-3">Trigger Button</p>
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#ui-modal"
+>
+  SHOW MODAL
+&lt;/button></code></pre>
+                    <p class="h5 mb-3">Modal Body</p>
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div
+  class="modal fade"
+  id="ui-modal"
+  tabindex="-1"
+  aria-labelledby="ui-modal"
+  aria-hidden="true"
+>
+  &lt;div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+  >
+    &lt;div class="modal-content">
+      &lt;div class="modal-body">
+        &lt;h1 class="mb-3">This is an example modal.&lt;/h1>
+          &lt;p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Suspendisse aliquet diam in elit malesuada
+            porttitor sed quis dolor. Aliquam mollis, metus sit
+            amet lacinia congue, urna orci scelerisque lacus, vel
+            tincidunt dolor tellus iaculis felis. Vestibulum
+            aliquam non risus sit amet fermentum.
+          &lt;/p>
+        &lt;/div>
+      &lt;div class="modal-footer">
+        &lt;button
+          type="button"
+          class="btn"
+          data-bs-dismiss="modal"
+        >
+          CLOSE
+        &lt;/button>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+                  </div>
+                </div>
+
+                <div
+                  class="modal fade"
+                  id="ui-modal"
+                  tabindex="-1"
+                  aria-labelledby="ui-modal"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <h1 class="mb-3">This is an example modal.</h1>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Suspendisse aliquet diam in elit malesuada
+                          porttitor sed quis dolor. Aliquam mollis, metus sit
+                          amet lacinia congue, urna orci scelerisque lacus, vel
+                          tincidunt dolor tellus iaculis felis. Vestibulum
+                          aliquam non risus sit amet fermentum.
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn"
+                          data-bs-dismiss="modal"
+                        >
+                          CLOSE
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Loader -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-loader"
@@ -221,27 +332,36 @@
                 aria-labelledby="v-pills-loader-tab"
                 tabindex="0"
               >
-                <h2>Loader</h2>
-                <span class="badge badge-style"
-                  >REQUIRE ASSET: /images/loader.png</span
+                <h1>Loader</h1>
+                <span class="badge badge-style mb-3"
+                  >ASSET REQUIRED: /images/loader.png</span
                 >
-                <pre
-                  class="mb-3"
-                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="loader-md">
+                <p>
+                  A general-purpose loading indicator for use during data
+                  requests and navigation are displayed to users.
+                </p>
+
+                <div class="row mb-5 justify-content-center">
+                  <div class="col-md-4">
+                    <div class="mb-5">
+                      <code>.loader-sm</code>
+                      <div class="loader-sm mx-auto mt-4"></div>
+                    </div>
+                    <div class="mb-5">
+                      <code>.loader-md</code>
+                      <div class="loader-md mx-auto mt-4"></div>
+                    </div>
+                    <div class="mb-5">
+                      <code>.loader-lg</code>
+                      <div class="loader-lg mx-auto mt-5"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="loader-md">
   &lt;span class="sr-only">Loading&lt;/span>
 &lt;/div></code></pre>
-                <div class="row mb-5 justify-content-center">
-                  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <pre class="inline-code">.loader-sm</pre>
-                    <div class="loader-sm mx-auto mt-4"></div>
-                  </div>
-                  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <pre class="inline-code">.loader-md</pre>
-                    <div class="loader-md mx-auto mt-4"></div>
-                  </div>
-                  <div class="col-sm-0 col-md-4 col-lg-3">
-                    <pre class="inline-code">.loader-lg</pre>
-                    <div class="loader-lg mx-auto mt-5"></div>
                   </div>
                 </div>
               </div>
