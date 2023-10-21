@@ -52,7 +52,7 @@ button {
 }
 
 code {
-  color: var(--color-medium);
+  color: var(--color-sunshade);
 }
 
 /* 
@@ -133,7 +133,7 @@ code {
 .navbar-toggler {
   border-color: var(--color-primary);
   background-color: var(--color-primary);
-  color: var(--color-medium);
+  color: var(--color-sunshade);
 }
 
 .navbar-toggler-icon {
@@ -186,7 +186,11 @@ code {
 }
 
 .color-block-primary,
-.color-block-medium,
+.color-block-grandis,
+.color-block-chardonnay,
+.color-block-cantaloupe,
+.color-block-sunshade,
+.color-block-meteor,
 .color-block-black,
 .color-block-success,
 .color-block-error {
@@ -199,8 +203,24 @@ code {
   background-color: var(--color-primary);
 }
 
-.color-block-medium {
-  background-color: var(--color-medium);
+.color-block-grandis {
+  background-color: var(--color-grandis);
+}
+
+.color-block-chardonnay {
+  background-color: var(--color-chardonnay);
+}
+
+.color-block-cantaloupe {
+  background-color: var(--color-cantaloupe);
+}
+
+.color-block-sunshade {
+  background-color: var(--color-sunshade);
+}
+
+.color-block-meteor {
+  background-color: var(--color-meteor);
 }
 
 .color-block-black {
@@ -218,7 +238,7 @@ code {
 /* Typography */
 
 .font-name-highlight {
-  border-bottom: 3px solid var(--color-medium);
+  border-bottom: 3px solid var(--color-sunshade);
   opacity: 0;
 
   animation: fade-in 3s 0.25s normal forwards;
@@ -242,7 +262,7 @@ code {
 }
 
 .grid-outer {
-  background-color: var(--color-medium);
+  background-color: var(--color-sunshade);
   border-radius: 10px;
 }
 
@@ -259,7 +279,7 @@ code {
 */
 
 .badge-style {
-  background-color: var(--color-medium);
+  background-color: var(--color-sunshade);
   color: var(--color-black);
   font-family: var(--font-secondary) !important;
 }
@@ -281,7 +301,7 @@ code {
 }
 
 .nav-link.active {
-  color: var(--color-medium) !important;
+  color: var(--color-sunshade) !important;
   font-weight: 700;
 }
 

@@ -5,7 +5,11 @@
 :root {
   /* Colors */
   --color-primary: #ffbd59;
-  --color-medium: #f99d1c;
+  --color-grandis: #fed18d;
+  --color-chardonnay: #fec774;
+  --color-cantaloupe: #fcab32;
+  --color-sunshade: #f99d1c;
+  --color-meteor: #d38105;
   --color-black: #000000;
   --color-success: #5ebb47;
   --color-error: #ec4724;
@@ -76,8 +80,28 @@
   color: var(--color-primary);
 }
 
-.text-color-medium {
-  color: var(--color-medium);
+.text-color-grandis {
+  color: var(--color-grandis);
+}
+
+.text-color-chardonnay {
+  color: var(--color-chardonnay);
+}
+
+.text-color-cantaloupe {
+  color: var(--color-cantaloupe);
+}
+
+.text-color-sunshade {
+  color: var(--color-sunshade);
+}
+
+.text-color-meteor {
+  color: var(--color-meteor);
+}
+
+.text-color-black {
+  color: var(--color-black);
 }
 
 /* UI Components: Loader */
@@ -121,12 +145,12 @@
 }
 
 .modal-footer button {
-  background-color: var(--color-medium);
+  background-color: var(--color-sunshade);
 }
 
 .modal-footer button:hover {
   background-color: var(--color-black);
-  color: var(--color-medium);
+  color: var(--color-sunshade);
 }
 
 /* Animations */
