@@ -276,6 +276,15 @@ code {
 }
 
 /* 
+  Data Visualization
+*/
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* 
   UI Components 
 */
 
@@ -340,6 +349,12 @@ code {
   color: var(--color-black);
   background-color: var(--color-primary);
   box-shadow: none;
+}
+
+/* Cards */
+
+.card-body {
+  background-color: var(--color-primary);
 }
 
 /* 

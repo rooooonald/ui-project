@@ -24,6 +24,8 @@
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/pattern.css" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   </head>
   <body>
     <header>
@@ -169,7 +171,7 @@
           </div>
 
           <div class="col-md-8 col-lg-9">
-            <div class="tab-content pe-5" id="v-pills-tabContent">
+            <div class="tab-content" id="v-pills-tabContent">
               <div
                 class="tab-pane fade show active"
                 id="v-pills-line-graph"
@@ -231,7 +233,24 @@
                 aria-labelledby="v-pills-donut-chart-tab"
                 tabindex="0"
               >
-                This is the donut chart page.
+                <h1>Donut Chart</h1>
+                <p>
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="donut-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">
+                      This is an example of donut chart.
+                    </h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -243,5 +262,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Charts -->
+    <script src="./scripts/charts/donut-chart.js"></script>
   </body>
 </html>
