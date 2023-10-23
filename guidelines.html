@@ -143,7 +143,7 @@
                 <h1 class="mb-3">
                   Welcome to the
                   <span class="text-color-primary">DailyTube</span> Pattern
-                  Library
+                  Library.
                 </h1>
                 <p class="mb-5">
                   At DailyTube, we celebrate creativity, positivity, and the
@@ -278,11 +278,20 @@
                         </p>
                         <button
                           type="button"
-                          class="getting-started-download-btn"
+                          class="getting-started-download-btn mb-3"
                           onclick="window.location.href = './ui-components.html'"
                         >
                           Download the .zip file
                         </button>
+                        <p>
+                          When all files are in place, put the
+                          <code>&lt;link></code> tag in the
+                          <code>&lt;head></code> for the css in your HTML
+                          document.
+                        </p>
+                        <pre
+                          class="mb-3"
+                        ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;link rel="stylesheet" href="/styles/pattern.css" /></code></pre>
                       </div>
                     </div>
                   </div>
@@ -591,7 +600,8 @@
                   It is mainly used for body text by using
                   <code>.text-secondary-font</code>. To adjust font weight, use
                   <code>.text-thin</code> and <code>.text-bold</code>. To adjust
-                  font size, use <code>.text-*size</code>.
+                  font size, use <code>.text-*size</code> (Default:
+                  <code>md</code>).
                 </p>
 
                 <div>
