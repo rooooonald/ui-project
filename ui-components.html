@@ -143,12 +143,12 @@
 
               <button
                 class="nav-link animated-btn my-2"
-                id="v-pills-pie-chart-tab"
+                id="v-pills-icons-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-pie-chart"
+                data-bs-target="#v-pills-icons"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-pie-chart"
+                aria-controls="v-pills-icons"
                 aria-selected="false"
               >
                 Icons
@@ -156,18 +156,20 @@
 
               <button
                 class="nav-link animated-btn my-2"
-                id="v-pills-donut-chart-tab"
+                id="v-pills-table-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-donut-chart"
+                data-bs-target="#v-pills-table"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-donut-chart"
+                aria-controls="v-pills-table"
                 aria-selected="false"
               >
-                Placeholder
+                Table
               </button>
             </div>
           </div>
+
+          <!-- Alert Page -->
 
           <div class="col-md-8 col-lg-9">
             <div class="tab-content" id="v-pills-tabContent">
@@ -178,8 +180,82 @@
                 aria-labelledby="v-pills-alerts-tab"
                 tabindex="0"
               >
-                This is the alerts page.
+                <h1 class="heading">Alert</h1>
+                <p>
+                  An alert is a notification or warning, typically in the form
+                  of a message or signal, designed to inform someone about a
+                  specific event, condition, or situation that requires their
+                  attention or action.
+                </p>
+                <div class="alert alert-success" role="alert">
+                  <p class="alert-heading h4 text-bold">I'm a SUCCESS alert.</p>
+                  <p>Used for displaying success messages.</p>
+                </div>
+
+                <div class="alert alert-error" role="alert">
+                  <p class="alert-heading h4 text-bold">I'm an ERROR alert.</p>
+                  <p>Used for displaying error messages.</p>
+                </div>
+
+                <div class="alert alert-information" role="alert">
+                  <p class="alert-heading h4 text-bold">
+                    I'm an INFORMATION alert.
+                  </p>
+                  <p>Used for displaying information and announcements.</p>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="alert alert-success" role="alert">
+  &lt;p class="alert-heading h4 text-bold">I'm a SUCCESS alert.&lt;/p>
+  &lt;p>Used for displaying success messages.&lt;/p>
+&lt;/div>
+
+&lt;div class="alert alert-error" role="alert">
+  &lt;p class="alert-heading h4 text-bold">I'm an ERROR alert.&lt;/p>
+  &lt;p>Used for displaying error messages.&lt;/p>
+&lt;/div>
+
+&lt;div class="alert alert-information" role="alert">
+  &lt;p class="alert-heading h4 text-bold">I'm an INFORMATION alert.&lt;/p>
+  &lt;p>Used for displaying information and announcements.&lt;/p>
+&lt;/div></code></pre>
+
+                <h2 class="heading mb-3">Dismissable Alerts</h2>
+
+                <div
+                  class="alert alert-error alert-dismissible fade show"
+                  role="alert"
+                >
+                  <p class="alert-heading h4 text-bold">I'm dismissable!</p>
+                  <p>Try clicking the closing button.</p>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div
+  class="alert alert-error alert-dismissible fade show"
+  role="alert"
+>
+  &lt;p class="alert-heading h4 text-bold">I'm dismissable!&lt;/p>
+  &lt;p>Try clicking the closing button.&lt;/p>
+  &lt;button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  >&lt;/button>
+&lt;/div></code></pre>
               </div>
+
+              <!-- Buttons Page -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-buttons"
@@ -187,8 +263,63 @@
                 aria-labelledby="v-pills-buttons-tab"
                 tabindex="0"
               >
-                This is the buttons page.
+                <h1 class="heading">Buttons</h1>
+                <p>
+                  A button is a virtual user interface element that, when
+                  pressed or clicked, triggers an action or response in a
+                  device, application, or system.
+                </p>
+                <div class="mb-3">
+                  <button type="button" class="btn main-btn">Primary</button>
+                  <button type="button" class="btn secondary-btn">
+                    Secondary
+                  </button>
+                  <button type="button" class="btn alert-btn">Alert</button>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;button type="button" class="btn main-btn">Primary&lt;/button>
+&lt;button type="button" class="btn secondary-btn">Secondary&lt;/button>
+&lt;button type="button" class="btn alert-btn">Alert&lt;/button></code></pre>
+
+                <h2 class="heading">Button Sizes</h2>
+                <p>
+                  If you want larger or smaller buttons, add the class
+                  <code>.btn-*size</code> for additional sizes.
+                </p>
+                <div class="row mb-5 justify-content-center">
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <code>.btn-sm</code>
+                      <div class="mt-1">
+                        <button type="button" class="btn main-btn btn-sm">
+                          Small
+                        </button>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <code>.btn-lg</code>
+                      <div class="mt-1">
+                        <button type="button" class="btn main-btn btn-lg">
+                          Large
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;button type="button" class="btn main-btn btn-sm">
+  Small
+&lt;/button>
+&lt;button type="button" class="btn main-btn btn-lg">
+  Large
+&lt;/button></code></pre>
+                  </div>
+                </div>
               </div>
+
               <div
                 class="tab-pane fade"
                 id="v-pills-card"
@@ -208,7 +339,7 @@
                 aria-labelledby="v-pills-modal-tab"
                 tabindex="0"
               >
-                <h1>Modal</h1>
+                <h1 class="heading">Modal</h1>
                 <p>
                   We use modals to display information or tips throughout the
                   dashboard.
@@ -221,7 +352,7 @@
                     <!-- Trigger Button -->
                     <button
                       type="button"
-                      class="btn btn-primary"
+                      class="btn main-btn"
                       data-bs-toggle="modal"
                       data-bs-target="#ui-modal"
                     >
@@ -234,7 +365,7 @@
                       class="mb-3"
                     ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;button
   type="button"
-  class="btn btn-primary"
+  class="btn main-btn"
   data-bs-toggle="modal"
   data-bs-target="#ui-modal"
 >
@@ -268,7 +399,7 @@
       &lt;div class="modal-footer">
         &lt;button
           type="button"
-          class="btn"
+          class="btn secondary-btn"
           data-bs-dismiss="modal"
         >
           CLOSE
@@ -305,7 +436,7 @@
                       <div class="modal-footer">
                         <button
                           type="button"
-                          class="btn"
+                          class="btn secondary-btn"
                           data-bs-dismiss="modal"
                         >
                           CLOSE
@@ -325,7 +456,7 @@
                 aria-labelledby="v-pills-loader-tab"
                 tabindex="0"
               >
-                <h1>Loader</h1>
+                <h1 class="heading">Loader</h1>
                 <p>
                   A general-purpose loading indicator for use during data
                   requests and navigation are displayed to users.
@@ -357,21 +488,150 @@
               </div>
               <div
                 class="tab-pane fade"
-                id="v-pills-pie-chart"
+                id="v-pills-icons"
                 role="tabpanel"
-                aria-labelledby="v-pills-pie-chart-tab"
+                aria-labelledby="v-pills-icons-tab"
                 tabindex="0"
               >
                 This is the placeholder page.
               </div>
+
+              <!-- Table Page -->
+
               <div
                 class="tab-pane fade"
-                id="v-pills-donut-chart"
+                id="v-pills-table"
                 role="tabpanel"
-                aria-labelledby="v-pills-donut-chart-tab"
+                aria-labelledby="v-pills-table-tab"
                 tabindex="0"
               >
-                This is the placeholder page.
+                <h1 class="heading">Table</h1>
+                <p>Tables are used to display data in tabular format.</p>
+
+                <div class="table-responsive">
+                  <table class="table table-hover mb-3">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Elon</td>
+                        <td>Musk</td>
+                        <td>
+                          <code>(415) 145-9687</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Bill</td>
+                        <td>Gates</td>
+                        <td>
+                          <code>(442) 685-1579</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Jeff</td>
+                        <td>Bezos</td>
+                        <td>
+                          <code>(433) 259-5746</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="table-responsive">
+  &lt;table class="table table-hover mb-3">
+    &lt;thead>
+      &lt;tr>
+        &lt;th scope="col">First Name&lt;/th>
+        &lt;th scope="col">Last Name&lt;/th>
+        &lt;th scope="col">Phone&lt;/th>
+      &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+      &lt;tr>
+        &lt;td>Elon&lt;/td>
+        &lt;td>Musk&lt;/td>
+        &lt;td>&lt;code>(415) 145-9687&lt;/code>&lt;/td>
+      &lt;/tr>
+      &lt;tr>
+        &lt;td>Bill&lt;/td>
+        &lt;td>Gates&lt;/td>
+        &lt;td>&lt;code>(442) 685-1579&lt;/code>&lt;/td>
+      &lt;/tr>
+      &lt;tr>
+        &lt;td>Jeff&lt;/td>
+        &lt;td>Bezos&lt;/td>
+        &lt;td>&lt;code>(433) 259-5746&lt;/code> &lt;/td>
+      &lt;/tr>
+    &lt;/tbody>
+  &lt;/table>
+&lt;/div></code></pre>
+
+                <h2 class="heading">Highlighted Cells</h2>
+                <p>
+                  You can highlight a table cell by inserting a
+                  <code>.table-active</code> class in the
+                  <code>&lt;td></code> tag.
+                </p>
+
+                <div class="table-responsive">
+                  <table class="table table-hover mb-3">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1165897559</td>
+                        <td class="table-active">Albert Einstein</td>
+                        <td>92</td>
+                      </tr>
+                      <tr>
+                        <td>1265295678</td>
+                        <td>Galileo Galilei</td>
+                        <td>86</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="table-responsive">
+  &lt;table class="table table-hover mb-3">
+    &lt;thead>
+      &lt;tr>
+        &lt;th scope="col">ID&lt;/th>
+        &lt;th scope="col">Name&lt;/th>
+        &lt;th scope="col">Score&lt;/th>
+      &lt;/tr>
+    &lt;/thead>
+    &lt;tbody>
+      &lt;tr>
+        &lt;td>1165897559&lt;/td>
+        &lt;td class="table-active">Albert Einstein&lt;/td>
+        &lt;td>92&lt;/td>
+      &lt;/tr>
+      &lt;tr>
+        &lt;td>1265295678&lt;/td>
+        &lt;td>Galileo Galilei&lt;/td>
+        &lt;td>86&lt;/td>
+      &lt;/tr>
+    &lt;/tbody>
+  &lt;/table>
+&lt;/div></code></pre>
+
+                <!-- Break -->
               </div>
             </div>
           </div>

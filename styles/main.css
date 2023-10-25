@@ -92,16 +92,6 @@ code {
   gap: 20px;
 }
 
-.index-btn-group button {
-  width: 200px;
-  padding: 10px 0;
-  background-color: var(--color-primary);
-}
-
-.index-btn-group button:hover {
-  animation: shake 0.5s 1 forwards normal;
-}
-
 #background-video {
   position: fixed;
   opacity: 0.75;
@@ -155,22 +145,6 @@ code {
 
 .heading {
   animation: text-regroup 1.5s forwards normal ease;
-}
-
-/* Intro */
-
-.getting-started-download-btn:hover {
-  animation: shake 0.5s 1 forwards normal;
-}
-
-.getting-started-download-btn {
-  width: 200px;
-  padding: 10px 0;
-  background-color: var(--color-primary);
-}
-
-.getting-started-download-btn:hover {
-  animation: shake 0.5s 1 forwards normal;
 }
 
 /* Colors */
@@ -291,12 +265,6 @@ code {
 /* 
   UI Components 
 */
-
-.badge-style {
-  background-color: var(--color-sunshade);
-  color: var(--color-black);
-  font-family: var(--font-secondary) !important;
-}
 
 /* 
   Bootstrap Classes 
@@ -437,6 +405,15 @@ code {
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 

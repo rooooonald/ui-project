@@ -31,6 +31,24 @@
   --font-size-xxl: 1.6rem;
 }
 
+/* 
+  Global Elements 
+*/
+
+.h1,
+.h2 {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  font-family: var(--font-secondary);
+}
+
 /* Guidelines: Typography */
 
 .text-primary-font {
@@ -105,6 +123,73 @@
   color: var(--color-black);
 }
 
+/* UI Components: Alert */
+
+.alert-success,
+.alert-error,
+.alert-information {
+  border-radius: 5px 25px 5px 25px;
+}
+
+.alert-success:hover,
+.alert-error:hover,
+.alert-information:hover {
+  transform-origin: left;
+  animation: contract 1s normal forwards ease;
+}
+
+.alert-success,
+.alert-error {
+  color: white;
+}
+
+.alert-success {
+  background-color: var(--color-success);
+}
+
+.alert-error {
+  background-color: var(--color-error);
+}
+
+.alert-information {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.alert-dismissible .btn-close {
+  --bs-btn-close-focus-shadow: none;
+}
+
+/* UI Components: Buttons */
+.btn {
+  border: none !important;
+}
+
+.main-btn,
+.main-btn:hover,
+.main-btn:active {
+  background-color: var(--color-primary) !important;
+}
+
+.secondary-btn,
+.secondary-btn:hover,
+.secondary-btn:active {
+  background-color: var(--color-sunshade) !important;
+}
+
+.alert-btn,
+.alert-btn:hover,
+.alert-btn:active {
+  background-color: var(--color-error) !important;
+  color: white !important;
+}
+
+.main-btn:hover,
+.secondary-btn:hover,
+.alert-btn:hover {
+  animation: shake 0.5s 1 forwards normal;
+}
+
 /* UI Components: Loader */
 
 .loader-sm,
@@ -145,13 +230,20 @@
   border: none;
 }
 
-.modal-footer button {
-  background-color: var(--color-sunshade);
+/* UI Components: Table */
+
+.table {
+  --bs-table-hover-bg: var(--color-grandis);
+  --bs-table-border-color: var(--color-grandis);
 }
 
-.modal-footer button:hover {
-  background-color: var(--color-black);
-  color: var(--color-sunshade);
+.table-active {
+  --bs-table-bg-state: var(--color-sunshade);
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
 }
 
 /* Animations */
@@ -182,5 +274,17 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes contract {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.95);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
