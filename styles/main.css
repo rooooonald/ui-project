@@ -92,6 +92,10 @@ code {
   gap: 20px;
 }
 
+.index-btn-group button {
+  width: 200px;
+}
+
 #background-video {
   position: fixed;
   opacity: 0.75;
@@ -250,21 +254,35 @@ code {
 }
 
 /* 
-  Data Visualization
+  UI Components 
 */
 
-.chart-wrapper {
-  display: flex;
-  justify-content: center;
+/* Icons */
+
+.icons-display-card {
+  transition: transform 0.5s;
 }
 
-.charts-card-body {
+.icons-display-card:hover {
+  transform: translateY(-10px);
+}
+
+.icons-display {
+  padding: 5px 0;
+  text-align: center;
+}
+
+.icons-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-primary);
 }
 
-/* 
-  UI Components 
-*/
+.icons-card-body p {
+  margin: 0;
+  padding: 5px;
+}
 
 /* 
   Bootstrap Classes 

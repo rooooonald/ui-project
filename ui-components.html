@@ -22,9 +22,15 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/pattern.css" />
     <link rel="stylesheet" href="./styles/prism.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   </head>
   <body data-prismjs-copy-timeout="2000">
     <header>
@@ -180,12 +186,10 @@
                 aria-labelledby="v-pills-alerts-tab"
                 tabindex="0"
               >
-                <h1 class="heading">Alert</h1>
+                <h1 class="heading">Alerts</h1>
                 <p>
-                  An alert is a notification or warning, typically in the form
-                  of a message or signal, designed to inform someone about a
-                  specific event, condition, or situation that requires their
-                  attention or action.
+                  Provide feedback messages for user actions, or inform users
+                  about a specific situation that requires their attention.
                 </p>
                 <div class="alert alert-success" role="alert">
                   <p class="alert-heading h4 text-bold">I'm a SUCCESS alert.</p>
@@ -265,9 +269,8 @@
               >
                 <h1 class="heading">Buttons</h1>
                 <p>
-                  A button is a virtual user interface element that, when
-                  pressed or clicked, triggers an action or response in a
-                  device, application, or system.
+                  Trigger an action or response in the dashboard when pressed or
+                  clicked.
                 </p>
                 <div class="mb-3">
                   <button type="button" class="btn main-btn">Primary</button>
@@ -283,7 +286,7 @@
 &lt;button type="button" class="btn secondary-btn">Secondary&lt;/button>
 &lt;button type="button" class="btn alert-btn">Alert&lt;/button></code></pre>
 
-                <h2 class="heading">Button Sizes</h2>
+                <h2 class="heading">Sizes</h2>
                 <p>
                   If you want larger or smaller buttons, add the class
                   <code>.btn-*size</code> for additional sizes.
@@ -320,6 +323,8 @@
                 </div>
               </div>
 
+              <!-- Card Page -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-card"
@@ -327,7 +332,189 @@
                 aria-labelledby="v-pills-card-tab"
                 tabindex="0"
               >
-                This is the card page.
+                <h1 class="heading">Card</h1>
+                <p>
+                  A flexible and extensible content container to display
+                  information, images or charts in the dashboard.
+                </p>
+
+                <div class="row mb-5 justify-content-center">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <img
+                        src="./images/demo.jpg"
+                        class="card-img-top"
+                        alt="This is a demo."
+                      />
+                      <div class="card-body charts-card-body">
+                        <h2 class="card-title">I'm a demo.</h2>
+                        <p class="card-text">Description goes here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h2 class="heading">Image Card</h2>
+                    <p class="mb-3">
+                      We can place an image to the top of the card using the
+                      class
+                      <code>.card-img-top</code>.
+                    </p>
+                    <pre
+                      class="mb-3"
+                    ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="card">
+  &lt;img
+    src="./images/demo.jpg"
+    class="card-img-top"
+    alt="This is a demo."
+  />
+  &lt;div class="card-body">
+    &lt;h2 class="card-title">I'm a demo.&lt;/h2>
+    &lt;p class="card-text">Description goes here.&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+                  </div>
+                </div>
+
+                <h2 class="heading">Colored Cards</h2>
+                <p class="mb-3">
+                  By adding the class <code>.card-bg-*color</code>, you can
+                  change the colors of the cards.
+                </p>
+                <div class="row gx-3 gy-3 mb-3">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-grandis">
+                      <div class="card-header">Grandis</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-chardonnay">
+                      <div class="card-header">Chardonnay</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-primary">
+                      <div class="card-header">Primary</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-cantaloupe">
+                      <div class="card-header">Cantaloupe</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-sunshade">
+                      <div class="card-header">Sunshade</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-meteor">
+                      <div class="card-header">Meteor</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-bg-black">
+                      <div class="card-header">Black</div>
+                      <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p class="card-text">
+                          Phasellus congue iaculis risus, non bibendum sem
+                          condimentum pulvinar.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="card card-bg-chardonnay">
+  &lt;div class="card-header">Chardonnay&lt;/div>
+  &lt;div class="card-body">
+    &lt;h2 class="card-title">Card Title&lt;/h2>
+    &lt;p class="card-text">
+      Phasellus congue iaculis risus, non bibendum sem
+      condimentum pulvinar.
+    &lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
+
+                <h2 class="heading">Card with Chart</h2>
+                <p class="mb-3">
+                  Charts can be embedded into the cards by inserting a chart
+                  <code>&lt;div></code>.
+                </p>
+                <div class="card mb-3" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="donut-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">
+                      This is an example of donut chart.
+                    </h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;div class="card mb-3" style="width: 100%; overflow: hidden">
+  &lt;div class="chart-wrapper">
+    &lt;!-- Chart div goes here --&gt;
+  &lt;/div>
+  &lt;div class="card-body">
+    &lt;h2 class="card-title">
+      This is an example of donut chart.
+    &lt;/h2>
+    &lt;p class="card-text">Description goes here.&lt;/p>
+  &lt;/div>
+&lt;/div></code></pre>
               </div>
 
               <!-- Modal Page -->
@@ -340,12 +527,9 @@
                 tabindex="0"
               >
                 <h1 class="heading">Modal</h1>
-                <p>
-                  We use modals to display information or tips throughout the
-                  dashboard.
-                </p>
+                <p>Displays information or tips throughout the dashboard.</p>
 
-                <div class="row">
+                <div class="row mb-5">
                   <div class="col-md-4 mb-5">
                     <p class="h4 mb-3">Example</p>
 
@@ -457,10 +641,7 @@
                 tabindex="0"
               >
                 <h1 class="heading">Loader</h1>
-                <p>
-                  A general-purpose loading indicator for use during data
-                  requests and navigation are displayed to users.
-                </p>
+                <p>Indicates the loading state of a component or data.</p>
 
                 <div class="row mb-5 justify-content-center">
                   <div class="col-md-4">
@@ -486,6 +667,9 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Icons Page -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-icons"
@@ -493,7 +677,358 @@
                 aria-labelledby="v-pills-icons-tab"
                 tabindex="0"
               >
-                This is the placeholder page.
+                <h1 class="heading">Icons</h1>
+                <p>
+                  Make full use of the free, high quality, open source Bootstrap
+                  icon library with over 2,000 icons. To use different icons,
+                  add the class <code>.bi-*iconName</code>.
+                </p>
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;i class="bi bi-award">&lt;/i></code></pre>
+                <h2 class="heading mb-3">Outlined Icons</h2>
+                <div class="row gy-3 gx-3 mb-5">
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-award icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">award</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-bar-chart icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">bar-chart</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-bookmark-star icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">bookmark-star</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-calendar icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">calendar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-clipboard-data icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">clipboard-data</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-diagram-3 icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">diagram-3</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-geo-alt icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">geo-alt</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-graph-up icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">graph-up</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-heart icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">heart</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-house-door icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">house-door</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-image icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">image</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-map icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">map</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-person icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">person</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-pie-chart icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">pie-chart</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-plus icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">plus</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-save icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">save</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-search icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">search</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-share icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">share</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-star icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">star</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="heading mb-3">Filled Icons</h2>
+                <div class="row gy-3 gx-3 mb-5">
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-award-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">award-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-bar-chart-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">bar-chart-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-bookmark-star-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">bookmark-star-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-calendar-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">calendar-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-clipboard-data-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">clipboard-data-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-diagram-3-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">diagram-3-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-geo-alt-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">geo-alt-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-heart-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">heart-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-house-door-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">house-door-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-image-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">image-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-map-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">map-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-person-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">person-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-pie-chart-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">pie-chart-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-save-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">save-fill</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-share-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">share-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="card icons-display-card">
+                      <i class="bi bi-star-fill icons-display"></i>
+                      <div class="icons-card-body">
+                        <p class="text-xxs">star-fill</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="heading">Colored Icons</h2>
+                <p>
+                  You can change the color of the icons by adding the class
+                  <code>.text-color-*colorName</code>.
+                </p>
+
+                <i
+                  class="bi bi-person-fill icons-display text-color-grandis"
+                ></i
+                ><i
+                  class="bi bi-person-fill icons-display text-color-chardonnay"
+                ></i
+                ><i
+                  class="bi bi-person-fill icons-display text-color-primary"
+                ></i
+                ><i
+                  class="bi bi-person-fill icons-display text-color-cantaloupe"
+                ></i
+                ><i
+                  class="bi bi-person-fill icons-display text-color-sunshade"
+                ></i
+                ><i
+                  class="bi bi-person-fill icons-display text-color-meteor"
+                ></i
+                ><i class="bi bi-person-fill icons-display text-color-black"></i
+                ><i class="bi bi-person icons-display text-color-black"></i
+                ><i class="bi bi-person icons-display text-color-meteor"></i
+                ><i class="bi bi-person icons-display text-color-sunshade"></i
+                ><i class="bi bi-person icons-display text-color-cantaloupe"></i
+                ><i class="bi bi-person icons-display text-color-primary"></i
+                ><i class="bi bi-person icons-display text-color-chardonnay"></i
+                ><i class="bi bi-person icons-display text-color-grandis"></i>
+
+                <pre
+                  class="mb-5"
+                ><code class="language-html" data-prismjs-copy="COPY" data-prismjs-copy-success="COPIED!">&lt;i class="bi bi-person-fill text-color-grandis">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-chardonnay">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-primary">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-cantaloupe">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-sunshade">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-meteor">&lt;/i>
+&lt;i class="bi bi-person-fill text-color-black">&lt;/i></code></pre>
               </div>
 
               <!-- Table Page -->
@@ -506,7 +1041,7 @@
                 tabindex="0"
               >
                 <h1 class="heading">Table</h1>
-                <p>Tables are used to display data in tabular format.</p>
+                <p>Presents structured data in a clear and organized manner.</p>
 
                 <div class="table-responsive">
                   <table class="table table-hover mb-3">
@@ -644,5 +1179,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/prism.js"></script>
+    <!-- Charts -->
+    <script src="./scripts/charts/donut-chart.js"></script>
   </body>
 </html>
