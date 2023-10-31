@@ -1,4 +1,4 @@
-const colors = [
+const colorsDonutChart = [
   "#FED18D",
   "#FEC774",
   "#FCAB32",
@@ -6,25 +6,30 @@ const colors = [
   "#D38105",
   "#000000",
 ];
-// set the dimensions and margins of the graph
-var width = 500,
-  height = 500,
-  margin = 100;
 
-// The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-var radius = Math.min(width, height) / 2 - margin;
+// Set the dimensions and margins of the graph
+var widthDonutChart = 600;
+var heightDonutChart = 600;
+var marginDonutChart = 100;
 
-// append the svg object to the div called 'my_dataviz'
-var svg = d3
+// The radius of the pieplot is half the width or half the height (smallest one). Subtract a bit of margin.
+var radiusDonutChart =
+  Math.min(widthDonutChart, heightDonutChart) / 2 - marginDonutChart;
+
+// Append the SVG object to the div called 'donut-chart'
+var svgDonutChart = d3
   .select("#donut-chart")
   .append("svg")
-  .attr("width", width)
-  .attr("height", height)
+  .attr("width", widthDonutChart)
+  .attr("height", heightDonutChart)
   .append("g")
-  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+  .attr(
+    "transform",
+    "translate(" + widthDonutChart / 2 + "," + heightDonutChart / 2 + ")"
+  );
 
 // New data
-const data1 = [
+const dataDonutChart = [
   { label: "Category X", value: 20 },
   { label: "Category Y", value: 10 },
   { label: "Category Z", value: 5 },
@@ -33,86 +38,100 @@ const data1 = [
   { label: "Category V", value: 15 },
 ];
 
-// set the color scale
-var color = d3
+// Set the color scale
+var colorDonutChart = d3
   .scaleOrdinal()
-  .domain(data1.map((d) => d.label))
-  .range(colors); // Use the custom color array
+  .domain(dataDonutChart.map((d) => d.label))
+  .range(colorsDonutChart);
 
-// Compute the position of each group on the pie:
-var pie = d3
+// Compute the position of each group on the pie
+var pieDonutChart = d3
   .pie()
-  .sort(null) // Do not sort group by size
+  .sort(null) // Do not sort groups by size
   .value(function (d) {
     return d.value;
   });
 
-var data_ready = pie(data1);
+var dataReadyDonutChart = pieDonutChart(dataDonutChart);
 
 // The arc generator
-var arc = d3
+var arcDonutChart = d3
   .arc()
-  .innerRadius(radius * 0.5) // This is the size of the donut hole
-  .outerRadius(radius * 0.8);
+  .innerRadius(radiusDonutChart * 0.5) // Size of the donut hole
+  .outerRadius(radiusDonutChart * 0.8);
 
-// Another arc that won't be drawn. Just for labels positioning
-var outerArc = d3
+// Another arc that won't be drawn, just for labels positioning
+var outerArcDonutChart = d3
   .arc()
-  .innerRadius(radius * 0.9)
-  .outerRadius(radius * 0.9);
+  .innerRadius(radiusDonutChart * 0.9)
+  .outerRadius(radiusDonutChart * 0.9);
 
-// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+// Set initial opacity for the SVG
+svgDonutChart
+  .style("opacity", 0)
+  .transition()
+  .duration(1000)
+  .style("opacity", 1);
 
-// Add the polylines between chart and labels:
-svg
+// Add the polylines between chart and labels
+svgDonutChart
   .selectAll("allPolylines")
-  .data(data_ready)
+  .data(dataReadyDonutChart)
   .enter()
   .append("polyline")
   .attr("stroke", "black")
   .style("fill", "none")
   .attr("stroke-width", 1)
   .attr("points", function (d) {
-    var posA = arc.centroid(d); // line insertion in the slice
-    var posB = outerArc.centroid(d); // line break: we use the other arc generator that has been built only for that
-    var posC = outerArc.centroid(d); // Label position = almost the same as posB
-    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2; // we need the angle to see if the X position will be at the extreme right or extreme left
-    posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // multiply by 1 or -1 to put it on the right or on the left
+    var posA = arcDonutChart.centroid(d); // Line insertion in the slice
+    var posB = outerArcDonutChart.centroid(d); // Line break, using the other arc generator
+    var posC = outerArcDonutChart.centroid(d); // Label position, almost the same as posB
+    var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2; // Angle to determine X position (right or left)
+    posC[0] = radiusDonutChart * 0.95 * (midangle < Math.PI ? 1 : -1); // Multiply by 1 or -1 to position it right or left
     return [posA, posB, posC];
-  });
+  })
+  .style("opacity", 0) // Start with opacity set to 0
+  .transition()
+  .duration(1000)
+  .style("opacity", 1);
 
-// Add the polylines between chart and labels:
-svg
+// Add the labels
+svgDonutChart
   .selectAll("allLabels")
-  .data(data_ready)
+  .data(dataReadyDonutChart)
   .enter()
   .append("text")
   .text(function (d) {
-    return d.data.label;
+    return d.data.value;
   })
   .attr("transform", function (d) {
-    var pos = outerArc.centroid(d);
+    var pos = outerArcDonutChart.centroid(d);
     var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2;
-    pos[0] = radius * 0.99 * (midangle < Math.PI ? 1 : -1);
+    pos[0] = radiusDonutChart * 0.99 * (midangle < Math.PI ? 1 : -1);
     return "translate(" + pos + ")";
   })
   .style("text-anchor", function (d) {
     var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2;
     return midangle < Math.PI ? "start" : "end";
-  });
+  })
+  .style("opacity", 0) // Start with opacity set to 0
+  .transition()
+  .duration(1000)
+  .style("opacity", 1);
 
-svg
+// Create the donut chart
+svgDonutChart
   .selectAll("allSlices")
-  .data(data_ready)
+  .data(dataReadyDonutChart)
   .enter()
   .append("path")
-  .attr("d", arc)
+  .attr("d", arcDonutChart)
   .attr("fill", function (d) {
-    return color(d.data.label);
-  }) // Use the custom color scale
+    return colorDonutChart(d.data.label);
+  })
   .attr("stroke", "white")
   .style("stroke-width", "2px")
-  .style("opacity", 0.7)
+  .style("opacity", 0.9)
   .on("mouseover", function (d) {
     // Add hover effect with zoom
     d3.select(this)
@@ -122,8 +141,8 @@ svg
         "d",
         d3
           .arc()
-          .innerRadius(radius * 0.5) // Reduce inner radius for zoom
-          .outerRadius(radius * 0.9) // Increase outer radius for zoom
+          .innerRadius(radiusDonutChart * 0.5) // Reduce inner radius for zoom
+          .outerRadius(radiusDonutChart * 0.9) // Increase outer radius for zoom
       )
       .style("opacity", 1)
       .style("stroke-width", "2px");
@@ -133,21 +152,64 @@ svg
     d3.select(this)
       .transition()
       .duration(200)
-      .attr("d", arc) // Restore the original path
-      .style("opacity", 0.7)
+      .attr("d", arcDonutChart) // Restore the original path
+      .style("opacity", 0.9)
       .attr("stroke", "white")
       .style("stroke-width", "2px");
   });
 
-svg
+// Legend and title
+var legendDonutChart = svgDonutChart
+  .selectAll("legend")
+  .data(dataReadyDonutChart)
+  .enter()
+  .append("g")
+  .attr("transform", function (d, i) {
+    var x = (i % 4) * 140 - 275;
+    var y = Math.floor(i / 4) * 30 + heightDonutChart / 3;
+    return "translate(" + x + "," + y + ")";
+  });
+
+// Create legend
+legendDonutChart
+  .append("rect")
+  .attr("width", 18)
+  .attr("height", 18)
+  .attr("rx", 2) // Rounded corners
+  .attr("ry", 2) // Rounded corners
+  .style("fill", function (d) {
+    return colorDonutChart(d.data.label);
+  })
+  .style("opacity", 0) // Start with opacity set to 0
+  .transition()
+  .duration(1000)
+  .style("opacity", 1);
+
+legendDonutChart
+  .append("text")
+  .attr("x", 30)
+  .attr("y", 9)
+  .attr("dy", ".35em")
+  .style("text-anchor", "start")
+  .text(function (d) {
+    return d.data.label;
+  })
+  .style("font-family", "Montserrat, sans-serif") // Use the custom font
+  .style("opacity", 0) // Start with opacity set to 0
+  .transition()
+  .duration(1000)
+  .style("opacity", 1);
+
+// Title
+svgDonutChart
   .append("text")
   .attr("x", 0) // Centered horizontally
-  .attr("y", -height / 2 + 60) // Centered vertically
+  .attr("y", -heightDonutChart / 2 + 60) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
   .style("font-family", "Signika Negative, sans-serif") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
-  .text("Donut Chart")
+  .text("Title Goes Here")
   .transition()
   .duration(1000)
   .style("opacity", 1); // Gradually increase opacity for the title

@@ -79,28 +79,29 @@
               aria-orientation="vertical"
             >
               <button
-                class="nav-link active animated-btn mb-2"
-                id="v-pills-line-graph-tab"
+                class="nav-link active animated-btn my-2"
+                id="v-pills-bar-chart-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-line-graph"
+                data-bs-target="#v-pills-bar-chart"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-line-graph"
+                aria-controls="v-pills-bar-chart"
                 aria-selected="true"
               >
-                Line Graph
+                Bar Chart
               </button>
+
               <button
-                class="nav-link animated-btn my-2"
-                id="v-pills-bar-graph-tab"
+                class="nav-link animated-btn mb-2"
+                id="v-pills-line-chart-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-bar-graph"
+                data-bs-target="#v-pills-line-chart"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-bar-graph"
+                aria-controls="v-pills-line-chart"
                 aria-selected="false"
               >
-                Bar Graph
+                Line Chart
               </button>
 
               <button
@@ -174,22 +175,102 @@
             <div class="tab-content" id="v-pills-tabContent">
               <div
                 class="tab-pane fade show active"
-                id="v-pills-line-graph"
+                id="v-pills-bar-chart"
                 role="tabpanel"
-                aria-labelledby="v-pills-line-graph-tab"
+                aria-labelledby="v-pills-bar-chart-tab"
                 tabindex="0"
               >
-                This is the line graph page.
+                <!-- Chart Content Start -->
+                <h1 class="heading">Bar Chart</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+
+                <h2 class="heading mb-3">Vertical</h2>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="vertical-bar-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a vertical bar chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
+
+                <!-- Chart Content Start -->
+                <h2 class="heading mb-3">Horizontal</h2>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="horizontal-bar-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a horizontal bar chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
+
+                <!-- Chart Content Start -->
+                <h2 class="heading mb-3">Stacked</h2>
+
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="stacked-bar-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a stacked bar chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
               </div>
+
               <div
                 class="tab-pane fade"
-                id="v-pills-bar-graph"
+                id="v-pills-line-chart"
                 role="tabpanel"
-                aria-labelledby="v-pills-bar-graph-tab"
+                aria-labelledby="v-pills-line-chart-tab"
                 tabindex="0"
               >
-                This is the bar graph page.
+                <!-- Chart Content Start -->
+                <h1 class="heading">Line Chart</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+
+                <h2 class="heading mb-3">Single Line</h2>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="line-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a single line chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
+
+                <!-- Chart Content Start -->
+                <h2 class="heading mb-3">Stacked</h2>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="stacked-line-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a stacked line chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
               </div>
+
               <div
                 class="tab-pane fade"
                 id="v-pills-single-value-chart"
@@ -206,8 +287,41 @@
                 aria-labelledby="v-pills-area-chart-tab"
                 tabindex="0"
               >
-                This is the area chart page.
+                <!-- Chart Content Start -->
+                <h1 class="heading">Area Chart</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="area-chart" style="color: red">[TBC]</div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm an area chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
+
+                <!-- Chart Content Start -->
+                <h2 class="heading mb-3">Stacked</h2>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="stacked-area-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a stacked area chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
               </div>
+
+              <!-- Scatter Plot -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-scatter-plot"
@@ -215,8 +329,28 @@
                 aria-labelledby="v-pills-scatter-plot-tab"
                 tabindex="0"
               >
-                This is the scatter plot page.
+                <!-- Chart Content Start -->
+                <h1 class="heading">Scatter Plot</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="scatter-plot"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a scatter plot.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
               </div>
+
+              <!-- Pie Chart -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-pie-chart"
@@ -224,8 +358,28 @@
                 aria-labelledby="v-pills-pie-chart-tab"
                 tabindex="0"
               >
-                This is the pie chart page.
+                <!-- Chart Content Start -->
+                <h1 class="heading">Pie Chart</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+                <div class="card mb-5" style="width: 100%; overflow: hidden">
+                  <div class="chart-wrapper">
+                    <div id="pie-chart"></div>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">I'm a pie chart.</h2>
+                    <p class="card-text">Description goes here.</p>
+                  </div>
+                </div>
+                <!-- Chart Content Ends -->
               </div>
+
+              <!-- Donut Chart -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-donut-chart"
@@ -233,8 +387,9 @@
                 aria-labelledby="v-pills-donut-chart-tab"
                 tabindex="0"
               >
-                <h1>Donut Chart</h1>
-                <p>
+                <!-- Chart Content Start -->
+                <h1 class="heading">Donut Chart</h1>
+                <p class="mb-5">
                   Nunc id ipsum in lectus convallis semper malesuada vel arcu.
                   Donec interdum, urna eget pretium dignissim, mi justo faucibus
                   nulla, nec fermentum lacus augue quis magna. Praesent
@@ -245,12 +400,11 @@
                     <div id="donut-chart"></div>
                   </div>
                   <div class="card-body">
-                    <h2 class="card-title">
-                      This is an example of donut chart.
-                    </h2>
+                    <h2 class="card-title">I'm a donut chart.</h2>
                     <p class="card-text">Description goes here.</p>
                   </div>
                 </div>
+                <!-- Chart Content Ends -->
               </div>
             </div>
           </div>
@@ -264,6 +418,14 @@
     ></script>
 
     <!-- Charts -->
+    <script src="./scripts/charts/stacked-area-chart.js"></script>
     <script src="./scripts/charts/donut-chart.js"></script>
+    <script src="./scripts/charts/horizontal-bar-chart.js"></script>
+    <script src="./scripts/charts/pie-chart.js"></script>
+    <script src="./scripts/charts/scatter-plot.js"></script>
+    <script src="./scripts/charts/line-chart.js"></script>
+    <script src="./scripts/charts/stacked-bar-chart.js"></script>
+    <script src="./scripts/charts/stacked-line-chart.js"></script>
+    <script src="./scripts/charts/vertical-bar-chart.js"></script>
   </body>
 </html>
