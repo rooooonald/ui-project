@@ -123,14 +123,14 @@ svgStackedBarChart
   .append("g")
   .attr("class", "x-axis")
   .attr("transform", "translate(0," + heightStackedBarChart + ")")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisBottom(xStackedBarChart));
 
 // Add Y-axis
 svgStackedBarChart
   .append("g")
   .attr("class", "y-axis")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisLeft(yStackedBarChart));
 
 // Add axis labels
@@ -155,7 +155,7 @@ svgStackedBarChart
   .attr("y", -25) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()

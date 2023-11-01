@@ -103,7 +103,7 @@ svgStackedLineChart
 svgStackedLineChart
   .append("g")
   .attr("transform", "translate(0," + heightStackedLineChart + ")")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisBottom(xStackedLineChart).ticks(6).tickFormat(d3.format("d")))
   .selectAll("text")
   .style("text-anchor", "middle")
@@ -125,7 +125,7 @@ svgStackedLineChart
 // Add Y axis with labels and a title
 svgStackedLineChart
   .append("g")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisLeft(yStackedLineChart).ticks(6))
   .selectAll("text")
   .style("text-anchor", "middle")
@@ -148,7 +148,7 @@ svgStackedLineChart
   .attr("y", -25) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()

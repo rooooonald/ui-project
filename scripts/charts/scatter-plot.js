@@ -40,7 +40,7 @@ var svgScatterPlot = d3
 var xScatterPlot = d3.scaleLinear().domain([4, 8]).range([0, widthScatterPlot]);
 svgScatterPlot
   .append("g")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .attr("transform", "translate(0," + heightScatterPlot + ")")
   .call(d3.axisBottom(xScatterPlot));
 
@@ -52,7 +52,7 @@ var yScatterPlot = d3
 
 svgScatterPlot
   .append("g")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisLeft(yScatterPlot));
 
 // Color scale: give me a species name, I return a color
@@ -85,7 +85,7 @@ svgScatterPlot
   .attr("y", -25) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()

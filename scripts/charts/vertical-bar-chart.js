@@ -53,7 +53,7 @@ var xVerticalBarChart = d3
 svgVerticalBarChart
   .append("g")
   .attr("transform", "translate(0," + heightVerticalBarChart + ")")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisBottom(xVerticalBarChart))
   .selectAll("text")
   .attr("transform", "translate(-10,0)rotate(-45)")
@@ -62,11 +62,11 @@ svgVerticalBarChart
 // Add Y axis
 var yVerticalBarChart = d3
   .scaleLinear()
-  .domain([0, 13000])
+  .domain([0, 10000])
   .range([heightVerticalBarChart, 0]);
 svgVerticalBarChart
   .append("g")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisLeft(yVerticalBarChart));
 
 // Bars
@@ -110,7 +110,7 @@ svgVerticalBarChart
   .attr("y", -25) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()

@@ -114,7 +114,7 @@
                 aria-controls="v-pills-single-value-chart"
                 aria-selected="false"
               >
-                Single Value Charts
+                Single Value Chart
               </button>
 
               <button
@@ -271,6 +271,8 @@
                 <!-- Chart Content Ends -->
               </div>
 
+              <!-- Single Value Chart -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-single-value-chart"
@@ -278,8 +280,100 @@
                 aria-labelledby="v-pills-single-value-chart-tab"
                 tabindex="0"
               >
-                This is the single value chart page.
+                <h1 class="heading">Single Value Chart</h1>
+                <p class="mb-5">
+                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
+                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
+                  nulla, nec fermentum lacus augue quis magna. Praesent
+                  condimentum convallis arcu quis ultricies.
+                </p>
+                <div class="row gx-3 gy-3 mb-5">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-grandis">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="710"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-chardonnay">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="153"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-primary">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="258"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-cantaloupe">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="459"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-sunshade">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="324"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-meteor">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="680"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card card-sv-chart card-bg-black">
+                      <div class="card-body">
+                        <div
+                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="15"
+                        ></div>
+                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- Area Chart -->
+
               <div
                 class="tab-pane fade"
                 id="v-pills-area-chart"
@@ -297,7 +391,7 @@
                 </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
-                    <div id="area-chart" style="color: red">[TBC]</div>
+                    <div id="area-chart"></div>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title">I'm an area chart.</h2>
@@ -418,7 +512,9 @@
     ></script>
 
     <!-- Charts -->
+    <script src="./scripts/charts/area-chart.js"></script>
     <script src="./scripts/charts/stacked-area-chart.js"></script>
+    <script src="./scripts/charts/single-value-chart.js"></script>
     <script src="./scripts/charts/donut-chart.js"></script>
     <script src="./scripts/charts/horizontal-bar-chart.js"></script>
     <script src="./scripts/charts/pie-chart.js"></script>

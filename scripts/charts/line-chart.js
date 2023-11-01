@@ -1,10 +1,10 @@
 // Sample data for the line chart (Market Value of football clubs)
 var dataLineChart = [
   { year: 2010, marketValue: 150 },
-  { year: 2011, marketValue: 180 },
-  { year: 2012, marketValue: 200 },
-  { year: 2013, marketValue: 240 },
-  { year: 2014, marketValue: 300 },
+  { year: 2011, marketValue: 200 },
+  { year: 2012, marketValue: 180 },
+  { year: 2013, marketValue: 300 },
+  { year: 2014, marketValue: 240 },
   { year: 2015, marketValue: 350 },
 ];
 
@@ -61,7 +61,7 @@ svgLineChart
 svgLineChart
   .append("g")
   .attr("transform", "translate(0," + heightLineChart + ")")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisBottom(xLineChart).ticks(6).tickFormat(d3.format("d")))
   .selectAll("text")
   .style("text-anchor", "middle")
@@ -83,7 +83,7 @@ svgLineChart
 // Add Y axis with labels and a title
 svgLineChart
   .append("g")
-  .style("font-family", "var(--secondary-font)")
+  .style("font-family", "var(--font-secondary)")
   .call(d3.axisLeft(yLineChart).ticks(6))
   .selectAll("text")
   .style("text-anchor", "middle")
@@ -106,7 +106,7 @@ svgLineChart
   .attr("y", -25) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()

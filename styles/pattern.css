@@ -127,6 +127,37 @@ i {
   color: var(--color-black);
 }
 
+/* Data Visualization: Single Value Chart */
+
+.card-sv-chart {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s; /* Animation */
+}
+
+.card-sv-chart:hover {
+  transform: scale(1.05);
+}
+
+.card-sv-chart .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title-sv-chart,
+.card-text-sv-chart {
+  text-align: center;
+}
+
+.card-text-sv-chart {
+  font-family: var(--font-secondary);
+}
+
 /* UI Components: Alert */
 
 .alert-success,

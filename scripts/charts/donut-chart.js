@@ -194,7 +194,7 @@ legendDonutChart
   .text(function (d) {
     return d.data.label;
   })
-  .style("font-family", "Montserrat, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-secondary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .transition()
   .duration(1000)
@@ -207,7 +207,7 @@ svgDonutChart
   .attr("y", -heightDonutChart / 2 + 60) // Centered vertically
   .attr("text-anchor", "middle")
   .style("font-size", "30px")
-  .style("font-family", "Signika Negative, sans-serif") // Use the custom font
+  .style("font-family", "var(--font-primary)") // Use the custom font
   .style("opacity", 0) // Start with opacity set to 0
   .text("Title Goes Here")
   .transition()
