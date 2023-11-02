@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/pattern.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   </head>
   <body>
     <header>
@@ -183,13 +182,13 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Bar Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Visual representation that uses bars to compare data across
+                  different categories or groups. Provides a clear way to assess
+                  the range of values from high to low within each category.
                 </p>
 
                 <h2 class="heading mb-3">Vertical</h2>
+
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
                     <div id="vertical-bar-chart"></div>
@@ -215,7 +214,14 @@
                 <!-- Chart Content Ends -->
 
                 <!-- Chart Content Start -->
-                <h2 class="heading mb-3">Stacked</h2>
+                <h2 class="heading">Stacked</h2>
+                <p class="mb-3">
+                  Represents data using a stacked structure of sub-bars within
+                  each category or group. Each sub-bar in the stack corresponds
+                  to a different level of data. Effective in displaying data
+                  that has multiple values or components within a single
+                  category.
+                </p>
 
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
@@ -239,13 +245,12 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Line Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Compares data sets over time. Line charts display continuous
+                  data in a way that allows for a clear visualization of trends
+                  and fluctuations. Especially useful for showing the
+                  relationships and trends in data that evolve over time.
                 </p>
 
-                <h2 class="heading mb-3">Single Line</h2>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
                     <div id="line-chart"></div>
@@ -258,7 +263,11 @@
                 <!-- Chart Content Ends -->
 
                 <!-- Chart Content Start -->
-                <h2 class="heading mb-3">Stacked</h2>
+                <h2 class="heading">Stacked</h2>
+                <p class="mb-3">
+                  Provides a clear visual representation of how each component
+                  contributes to the overall trend or total value.
+                </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
                     <div id="stacked-line-chart"></div>
@@ -282,20 +291,20 @@
               >
                 <h1 class="heading">Single Value Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Offers valuable insights and is advisable to position the
+                  chart prominently at the top and commence it from the left
+                  side of the screen, ensuring immediate attention to the data
+                  point.
                 </p>
                 <div class="row gx-3 gy-3 mb-5">
                   <div class="col-md-6 col-lg-4">
                     <div class="card card-sv-chart card-bg-grandis">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
-                          data-val="710"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          data-val="711"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -303,10 +312,10 @@
                     <div class="card card-sv-chart card-bg-chardonnay">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="153"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -315,10 +324,10 @@
                     <div class="card card-sv-chart card-bg-primary">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="258"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -326,10 +335,10 @@
                     <div class="card card-sv-chart card-bg-cantaloupe">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="459"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -338,10 +347,10 @@
                     <div class="card card-sv-chart card-bg-sunshade">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="324"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -350,10 +359,10 @@
                     <div class="card card-sv-chart card-bg-meteor">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="680"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -362,10 +371,10 @@
                     <div class="card card-sv-chart card-bg-black">
                       <div class="card-body">
                         <div
-                          class="card-title-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                          class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
                           data-val="15"
                         ></div>
-                        <p class="card-text-sv-chart h4">Title Goes Here</p>
+                        <p class="card-title-sv-chart h4">Title Goes Here</p>
                       </div>
                     </div>
                   </div>
@@ -384,10 +393,10 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Area Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Visual representation of fluctuations in data over specific
+                  time frames or categories. Filled areas are used to emphasize
+                  the variations in data and help users easily distinguish and
+                  compare different data sets.
                 </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
@@ -401,7 +410,12 @@
                 <!-- Chart Content Ends -->
 
                 <!-- Chart Content Start -->
-                <h2 class="heading mb-3">Stacked</h2>
+                <h2 class="heading">Stacked</h2>
+                <p class="mb-3">
+                  Combines aspects of stacked area and line charts to show how
+                  multiple data sets contribute to a cumulative total over time
+                  or within categories.
+                </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
                     <div id="stacked-area-chart"></div>
@@ -426,10 +440,9 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Scatter Plot</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Represent relationships among numerical data sets in a precise
+                  and efficient way. Ideal for identifying correlations and
+                  patterns between sets of data.
                 </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
@@ -455,10 +468,11 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Pie Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Visually represents data relationships using percentages,
+                  offering a transparent means of comparing various values to a
+                  whole. Each pie segment corresponds to a specific category,
+                  facilitating distinctions and enabling straightforward data
+                  analysis.
                 </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
@@ -484,10 +498,8 @@
                 <!-- Chart Content Start -->
                 <h1 class="heading">Donut Chart</h1>
                 <p class="mb-5">
-                  Nunc id ipsum in lectus convallis semper malesuada vel arcu.
-                  Donec interdum, urna eget pretium dignissim, mi justo faucibus
-                  nulla, nec fermentum lacus augue quis magna. Praesent
-                  condimentum convallis arcu quis ultricies.
+                  Provides a reliable method for assessing the associations
+                  among a group of data points.
                 </p>
                 <div class="card mb-5" style="width: 100%; overflow: hidden">
                   <div class="chart-wrapper">
