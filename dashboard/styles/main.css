@@ -1,0 +1,199 @@
+/* 
+  Imports 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Signika+Negative:wght@300;400;700&display=swap");
+
+/* 
+  Global Elements 
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-regular);
+  overflow-x: hidden;
+  /* background-color: var(--color-primary); */
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+th {
+  color: var(--color-primary) !important;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  outline: none;
+}
+
+code {
+  color: var(--color-sunshade);
+}
+
+/* 
+  Navigation Bar 
+*/
+
+.nav-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-primary);
+  border-radius: 0 0 25px 25px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-logo {
+  width: 75px;
+  animation: heartbeat 0.5s 1 forwards normal;
+}
+
+/* Charts */
+
+#country_chart6 {
+  display: none;
+}
+
+#country_chart6_btnGrp {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 
+  Animated Components
+*/
+
+.animated-btn {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.animated-btn:hover {
+  color: white;
+}
+
+.animated-btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: center;
+  z-index: -1;
+}
+
+.animated-btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+/* 
+  Animations
+*/
+
+@keyframes text-regroup {
+  from {
+    letter-spacing: 10px;
+  }
+  to {
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes text-expand {
+  from {
+    letter-spacing: 1px;
+  }
+  to {
+    letter-spacing: 8px;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* 
+  Media Queries
+*/
+
+@media only screen and (max-width: 767px) {
+  #country_chart6 {
+    display: block;
+  }
+
+  #country_chart6_btnGrp {
+    display: none;
+  }
+}

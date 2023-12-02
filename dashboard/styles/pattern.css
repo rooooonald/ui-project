@@ -1,0 +1,416 @@
+/* 
+  CSS Variables 
+*/
+
+:root {
+  /* Colors */
+  --color-primary: #ffbd59;
+  --color-grandis: #fed18d;
+  --color-chardonnay: #fec774;
+  --color-cantaloupe: #fcab32;
+  --color-sunshade: #f99d1c;
+  --color-meteor: #d38105;
+  --color-black: #000000;
+  --color-success: #5ebb47;
+  --color-error: #ec4724;
+
+  /* Fonts */
+  --font-primary: "Signika Negative", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-size-xxs: 0.7rem;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.9rem;
+  --font-size-xxl: 2.4rem;
+}
+
+/* 
+  Global Elements 
+*/
+
+.h1,
+.h2 {
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  font-family: var(--font-secondary);
+}
+
+i {
+  color: var(--color-primary);
+}
+
+/* Guidelines: Typography */
+
+.text-primary-font {
+  font-family: var(--font-primary);
+}
+
+.text-secondary-font {
+  font-family: var(--font-secondary);
+}
+
+.text-xxs {
+  font-size: var(--font-size-xxs);
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.text-thin {
+  font-weight: var(--font-weight-thin);
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-color-primary {
+  color: var(--color-primary);
+}
+
+.text-color-grandis {
+  color: var(--color-grandis);
+}
+
+.text-color-chardonnay {
+  color: var(--color-chardonnay);
+}
+
+.text-color-cantaloupe {
+  color: var(--color-cantaloupe);
+}
+
+.text-color-sunshade {
+  color: var(--color-sunshade);
+}
+
+.text-color-meteor {
+  color: var(--color-meteor);
+}
+
+.text-color-black {
+  color: var(--color-black);
+}
+
+/* Data Visualization: Single Value Chart */
+
+.card-sv-chart {
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-sv-chart .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title-sv-chart,
+.card-text-sv-chart {
+  text-align: center;
+}
+
+.card-title-sv-chart {
+  font-family: var(--font-secondary);
+}
+
+/* UI Components: Alert */
+
+.alert-success,
+.alert-error,
+.alert-information {
+  border-radius: 5px 25px 5px 25px;
+}
+
+.alert-success:hover,
+.alert-error:hover,
+.alert-information:hover {
+  transform-origin: left;
+  animation: contract 1s normal forwards ease;
+}
+
+.alert-success,
+.alert-error {
+  color: white;
+}
+
+.alert-success {
+  background-color: var(--color-success);
+}
+
+.alert-error {
+  background-color: var(--color-error);
+}
+
+.alert-information {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.alert-dismissible .btn-close {
+  --bs-btn-close-focus-shadow: none;
+}
+
+/* UI Components: Buttons */
+.btn {
+  border: none !important;
+}
+
+.main-btn,
+.main-btn:hover,
+.main-btn:active {
+  background-color: var(--color-primary) !important;
+}
+
+.secondary-btn,
+.secondary-btn:hover,
+.secondary-btn:active {
+  background-color: var(--color-sunshade) !important;
+}
+
+.alert-btn,
+.alert-btn:hover,
+.alert-btn:active {
+  background-color: var(--color-error) !important;
+  color: white !important;
+}
+
+.main-btn:hover,
+.secondary-btn:hover,
+.alert-btn:hover {
+  animation: shake 0.5s 1 forwards normal;
+}
+
+/* UI Components: Card */
+
+.card {
+  height: 100%;
+  border-radius: 5px 25px 5px 5px !important;
+  border: 1px solid var(--color-primary);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: transparent;
+}
+
+.card-body {
+  background-color: var(--color-primary);
+}
+
+.card-bg-grandis .card-header,
+.card-bg-chardonnay .card-header,
+.card-bg-primary .card-header {
+  border-bottom: 1px dashed var(--color-sunshade);
+}
+
+.card-bg-primary .card-header,
+.card-bg-cantaloupe .card-header,
+.card-bg-sunshade .card-header {
+  border-bottom: 1px dashed var(--color-black);
+}
+
+.card-bg-meteor .card-header,
+.card-bg-black .card-header {
+  border-bottom: 1px dashed var(--color-primary);
+}
+
+.card-bg-primary {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.card-bg-grandis {
+  border: 1px solid var(--color-grandis);
+  background-color: var(--color-grandis);
+}
+
+.card-bg-chardonnay {
+  border: 1px solid var(--color-chardonnay);
+  background-color: var(--color-chardonnay);
+}
+
+.card-bg-cantaloupe {
+  border: 1px solid var(--color-cantaloupe);
+  background-color: var(--color-cantaloupe);
+}
+
+.card-bg-sunshade {
+  border: 1px solid var(--color-sunshade);
+  background-color: var(--color-sunshade);
+}
+
+.card-bg-meteor {
+  border: 1px solid var(--color-meteor);
+  background-color: var(--color-meteor);
+  color: var(--color-grandis);
+}
+
+.card-bg-black {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-primary);
+}
+
+.card-bg-grandis .card-body,
+.card-bg-chardonnay .card-body,
+.card-bg-primary .card-body,
+.card-bg-cantaloupe .card-body,
+.card-bg-sunshade .card-body,
+.card-bg-meteor .card-body,
+.card-bg-black .card-body {
+  background-color: transparent;
+}
+
+.chart-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* UI Components: Loader */
+
+.loader-sm,
+.loader-md,
+.loader-lg {
+  background-image: url(../images/loader.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation: loader 0.75s normal infinite linear;
+}
+
+.loader-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.loader-md {
+  width: 50px;
+  height: 50px;
+}
+
+.loader-lg {
+  width: 70px;
+  height: 70px;
+}
+
+/* UI Components: Modal */
+
+.modal-content {
+  background-color: var(--color-primary);
+  border: none;
+  animation: shake 0.5s normal forwards;
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
+}
+
+/* UI Components: Table */
+
+.table {
+  --bs-table-hover-bg: var(--color-grandis);
+  --bs-table-border-color: var(--color-grandis);
+}
+
+.table-active {
+  --bs-table-bg-state: var(--color-sunshade);
+}
+
+.modal-footer {
+  justify-content: center;
+  border: none;
+}
+
+/* Charts */
+
+#stacked-line-chart {
+  width: 100%;
+}
+
+/* Animations */
+
+@keyframes loader {
+  0% {
+    transform: scale(0.8) rotate(0);
+  }
+
+  50% {
+    transform: scale(1.5) rotate(270deg);
+  }
+
+  100% {
+    transform: scale(0.8) rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes contract {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.95);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

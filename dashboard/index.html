@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DailyTube Data Dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./styles/pattern.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/chart.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md nav-main">
+        <a class="navbar-brand" href="./index.html"
+          ><img
+            src="./images/logo.png"
+            alt="Logo of DailyTube"
+            class="nav-logo"
+        /></a>
+      </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+
+    <div class="container-fluid">
+      <!-- Row 1 -->
+      <div class="row mt-3 gx-3 gy-3" data-aos="zoom-in-up">
+        <div class="col-md-8">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div id="#">Chart 1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-sv-chart card-bg-grandis">
+            <div class="card-body">
+              <div
+                class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                data-val="2564"
+                data-unit="M"
+                id="chart7"
+              ></div>
+              <p class="card-title-sv-chart h4">
+                Gaming & Apps has the most followers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+
+      <div
+        class="row mt-3 gx-3 gy-3"
+        data-aos="zoom-in-up"
+        data-aos-id="chart6"
+      >
+        <div class="col">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div class="row">
+                <div id="chart6" class="col-md-8"></div>
+                <div class="col-md-4">
+                  <label for="country_chart6">Select Country</label>
+                  <select
+                    class="form-control"
+                    id="country_chart6"
+                    onchange="renderChart6()"
+                  >
+                    <option value="BR">🇧🇷 Brazil</option>
+                    <option value="BY">🇧🇾 Belarus</option>
+                    <option value="CA">🇨🇦 Canada</option>
+                    <option value="CL">🇨🇱 Chile</option>
+                    <option value="IN" selected>🇮🇳 India</option>
+                    <option value="KR">🇰🇷 South Korea</option>
+                    <option value="MX">🇲🇽 Mexico</option>
+                    <option value="NO">🇳🇴 Norway</option>
+                    <option value="PH">🇵🇭 Philippines</option>
+                    <option value="PR">🇵🇷 Puerto Rico</option>
+                    <option value="RU">🇷🇺 Russia</option>
+                    <option value="SV">🇸🇻 El Salvador</option>
+                    <option value="TH">🇹🇭 Thailand</option>
+                    <option value="US">🇺🇸 United States</option>
+                  </select>
+                  <div id="country_chart6_btnGrp">
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`BR`); this.classList.add(`alert-btn`)"
+                    >
+                      🇧🇷 Brazil
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`BY`); this.classList.add(`alert-btn`)"
+                    >
+                      🇧🇾 Belarus
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`CA`); this.classList.add(`alert-btn`)"
+                    >
+                      🇨🇦 Canada
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`CL`); this.classList.add(`alert-btn`)"
+                    >
+                      🇨🇱 Chile
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`IN`); this.classList.add(`alert-btn`)"
+                    >
+                      🇮🇳 India
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`KR`); this.classList.add(`alert-btn`)"
+                    >
+                      🇰🇷 South Korea
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`MX`); this.classList.add(`alert-btn`)"
+                    >
+                      🇲🇽 Mexico
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`NO`); this.classList.add(`alert-btn`)"
+                    >
+                      🇳🇴 Norway
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`PH`); this.classList.add(`alert-btn`)"
+                    >
+                      🇵🇭 Philippines
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`PR`); this.classList.add(`alert-btn`)"
+                    >
+                      🇵🇷 Puerto Rico
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`RU`); this.classList.add(`alert-btn`)"
+                    >
+                      🇷🇺 Russia
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`SV`); this.classList.add(`alert-btn`)"
+                    >
+                      🇸🇻 El Salvador
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`TH`); this.classList.add(`alert-btn`)"
+                    >
+                      🇹🇭 Thailand
+                    </button>
+                    <button
+                      type="button"
+                      class="btn main-btn chart6-btnGrp"
+                      onclick="renderChart6(`US`); this.classList.add(`alert-btn`)"
+                    >
+                      🇺🇸 United States
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+
+      <div class="row mt-3 gx-3 gy-3" data-aos="fade-up" data-aos-id="chart8">
+        <div class="col-md-4">
+          <div class="card card-sv-chart card-bg-meteor">
+            <div class="card-body">
+              <div
+                class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                data-val="40"
+                data-unit=""
+                id="chart8"
+              ></div>
+              <p class="card-title-sv-chart h4">
+                United States has the most YouTubers in the Top 100 list.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div id="#">Chart 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+
+      <div class="row mt-3 gx-3 gy-3" data-aos="zoom-out" data-aos-id="chart9">
+        <div class="col">
+          <div class="card card-sv-chart card-bg-black">
+            <div class="card-body">
+              <div
+                class="card-text-sv-chart single-chart-val text-xxl text-bold text-primary-font"
+                data-val="220"
+                data-unit="M"
+                id="chart9"
+              ></div>
+              <p class="card-title-sv-chart h4">
+                T-Series has the most subscribers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+
+      <div class="row mt-3 gx-3 gy-3">
+        <div class="col-md-6" data-aos="flip-left">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div id="chart4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="flip-right" data-aos-id="chart5">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div id="chart5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 6 -->
+
+      <div class="row mt-3 mb-5 gx-3 gy-3" data-aos="zoom-out">
+        <div class="col">
+          <div class="card" style="width: 100%; overflow: hidden">
+            <div class="chart-wrapper">
+              <div id="chart2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Charts -->
+    <script src="./scripts/charts/chart2.js"></script>
+    <script src="./scripts/charts/chart4.js"></script>
+    <script src="./scripts/charts/chart5.js"></script>
+    <script src="./scripts/charts/chart6.js"></script>
+    <script src="./scripts/charts/single-value-chart.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: -150, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-center", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+  </body>
+</html>
