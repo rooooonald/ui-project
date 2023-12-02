@@ -20,7 +20,7 @@ var svg_chart4 = d3
     "translate(" + margin_chart4.left + "," + margin_chart4.top + ")"
   );
 
-d3.csv("/data/chart4.csv").then((data) => {
+d3.csv("/dashboard/data/chart4.csv").then((data) => {
   var parseDate = d3.timeParse("%Y");
   // Add X axis --> it is a linear scale since "Year_chart4" is numeric
   var x_chart4 = d3
