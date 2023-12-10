@@ -106,7 +106,7 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
       // Show the tooltip on hover
       tooltip_chart4.transition().duration(200).style("opacity", 0.9);
       tooltip_chart4
-        .html(`${d_chart4}`)
+        .html(`<strong>${d_chart4}</strong>`)
         .style("left", event_chart4.pageX + "px")
         .style("top", event_chart4.pageY - 28 + "px");
     })

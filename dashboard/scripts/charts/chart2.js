@@ -3,7 +3,7 @@ const margin_chart2 = { top: 70, right: 50, bottom: 80, left: 100 };
 const containerWidth_chart2 = document.getElementById("chart2").offsetWidth;
 const width_chart2 =
   containerWidth_chart2 - margin_chart2.left - margin_chart2.right;
-const height_chart2 = 400 - margin_chart2.top - margin_chart2.bottom;
+const height_chart2 = 500 - margin_chart2.top - margin_chart2.bottom;
 
 // Append the SVG object to the body of the page
 var svg_chart2 = d3
@@ -29,7 +29,6 @@ d3.csv("/dashboard/data/chart2.csv").then((data_chart2) => {
     d.likes = +d.likes;
   });
 
-  console.log(data_chart2);
   // Add X axis
   var x_chart2 = d3
     .scaleLinear()

@@ -1,5 +1,6 @@
 /* Chart 6 */
 
+.bar-chart3,
 .bar-chart6 {
   fill: var(--color-primary);
 }

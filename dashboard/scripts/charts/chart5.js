@@ -123,16 +123,19 @@ const renderChart5 = () => {
       .attr("fill", function (d) {
         return color_chart5(d.key);
       })
-      .on("mouseover", function (event_chart4, d_chart5) {
+      .on("mouseover", function (event_chart5, d_chart5) {
         d3.select(this).attr("fill", (d) =>
           d3.rgb(color_chart5(d.key)).darker(1)
         );
         // Show the tooltip on hover
         tooltip_chart5.transition().duration(200).style("opacity", 0.9);
         tooltip_chart5
-          .html(`${d_chart5.key}: $${d_chart5.value}`)
-          .style("left", event_chart4.pageX + "px")
-          .style("top", event_chart4.pageY - 28 + "px");
+          .html(
+            `${d_chart5.key} Income<br>
+          <strong>USD ${d_chart5.value}</strong>`
+          )
+          .style("left", event_chart5.pageX + "px")
+          .style("top", event_chart5.pageY - 28 + "px");
       })
       .on("mouseout", function () {
         d3.select(this).attr("fill", (d) => d3.rgb(color_chart5(d.key)));

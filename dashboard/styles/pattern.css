@@ -133,16 +133,12 @@ i {
   height: 100%;
   min-height: 200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.card-sv-chart .card-body {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .card-title-sv-chart,

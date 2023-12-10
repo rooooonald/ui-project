@@ -80,9 +80,9 @@ const renderChart6 = (country) => {
           tooltip_chart6.transition().duration(200).style("opacity", 0.9);
           tooltip_chart6
             .html(
-              `${d_chart6.count} ${
-                d_chart6.count > 1 ? "channels" : "channel"
-              } in ${d_chart6.category} category`
+              `<strong>${d_chart6.category}</strong><br>${d_chart6.count} ${
+                d_chart6.count > 1 ? "Channels" : "Channel"
+              }`
             )
             .style("left", event_chart6.pageX + "px")
             .style("top", event_chart6.pageY - 28 + "px");
@@ -140,7 +140,7 @@ const renderChart6 = (country) => {
         .attr("class", "chart-title-full")
         .style("font-family", "var(--font-primary)") // Use the custom font
         .text(
-          `The number of YouTube channels in ${formatCountry(
+          `Number of YouTube channels in ${formatCountry(
             selectedCountry_chart6
           )} by category`
         );
