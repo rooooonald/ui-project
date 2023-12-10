@@ -1,7 +1,7 @@
 /* Toggle Mode */
 
 .toggle-chart1-mode {
-  margin-top: -30px !important;
+  margin-top: -25px !important;
 }
 
 .toggle-chart1-mode,
@@ -67,7 +67,7 @@
 /* Chart Title */
 
 .chart-title-full {
-  font-size: clamp(18px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 18px);
 }
 
 .chart-title-half {
