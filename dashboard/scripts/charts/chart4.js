@@ -22,7 +22,7 @@ var svg_chart4 = d3
 
 d3.csv("/dashboard/data/chart4.csv").then((data) => {
   var parseDate = d3.timeParse("%Y");
-  // Add X axis --> it is a linear scale since "Year_chart4" is numeric
+  // Add X axis, linear scale since "Year_chart4" is numeric
   var x_chart4 = d3
     .scaleTime()
     .domain(
@@ -189,7 +189,7 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
         })
         .attr("stroke-width", 5);
     })
-    // Add mouseout event listener to legend lines
+    // Add mouseout event listener to legend
     .on("mouseout", function () {
       // Reset the opacity and stroke-width of all lines
       svg_chart4

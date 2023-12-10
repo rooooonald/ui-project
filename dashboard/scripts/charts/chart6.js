@@ -3,11 +3,10 @@ const renderChart6 = (country) => {
 
   for (let button of chart6BtnGrp) {
     button.classList.remove("alert-btn");
+    button.value === country && button.classList.add("alert-btn");
   }
 
   d3.csv("/dashboard/data/chart6.csv").then((data_chart6) => {
-    // Default country
-    let selectedCountry_chart6 = "IN";
     if (country) {
       selectedCountry_chart6 = country;
     } else {
@@ -201,5 +200,5 @@ const formatCountry = (countryCode) => {
 };
 
 document.addEventListener("aos:in:chart6", () => {
-  renderChart6();
+  renderChart6("IN");
 });

@@ -196,9 +196,12 @@ const renderChart5 = () => {
         // Dim all bars except the one corresponding to the legend item
         svg_chart5
           .selectAll(".chart5-bar")
+          .attr("opacity", 1)
           .filter(function (d) {
             return d.key !== d_legend;
           })
+          .transition() // Apply a transition
+          .duration(500)
           .attr("opacity", 0.1);
       })
       // Add mouseout event listener to legend lines

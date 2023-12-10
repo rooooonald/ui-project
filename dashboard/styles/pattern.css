@@ -198,6 +198,10 @@ i {
   background-color: var(--color-primary) !important;
 }
 
+.main-btn i {
+  color: var(--color-black);
+}
+
 .secondary-btn,
 .secondary-btn:hover,
 .secondary-btn:active {
@@ -208,6 +212,10 @@ i {
 .alert-btn:hover,
 .alert-btn:active {
   background-color: var(--color-error) !important;
+  color: white !important;
+}
+
+.alert-btn i {
   color: white !important;
 }
 

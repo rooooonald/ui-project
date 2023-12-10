@@ -1,4 +1,46 @@
-/* Chart 6 */
+/* Toggle Mode */
+
+.toggle-chart1-mode {
+  margin-top: -30px !important;
+}
+
+.toggle-chart1-mode,
+.toggle-chart2-mode {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btnGrp-title {
+  height: 70%;
+  text-align: center;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  border-right: 5px solid var(--color-primary);
+}
+
+.btnGrp-btn {
+  padding: 10px 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Chart 2 */
+
+.selected-chart2 {
+  opacity: 1 !important;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+/* Bar Charts */
 
 .bar-chart3,
 .bar-chart6 {
@@ -8,6 +50,8 @@
 .bar-chart6:hover {
   fill: var(--color-sunshade);
 }
+
+/* Tooltip */
 
 .tooltip {
   position: absolute;
@@ -20,16 +64,12 @@
   pointer-events: none;
 }
 
+/* Chart Title */
+
 .chart-title-full {
   font-size: clamp(18px, 2vw, 24px);
 }
 
 .chart-title-half {
-  font-size: clamp(12px, 2vw, 18px);
-}
-
-.selected-chart2 {
-  opacity: 1 !important;
-  stroke: black;
-  stroke-width: 1px;
+  font-size: clamp(16px, 2vw, 18px);
 }
