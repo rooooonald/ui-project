@@ -27,7 +27,7 @@ const renderChart5 = () => {
       "translate(" + margin_chart5.left + "," + margin_chart5.top + ")"
     );
 
-  d3.csv("/data/chart5.csv").then((data_chart5) => {
+  d3.csv("/dashboard/data/chart5.csv").then((data_chart5) => {
     // List of subgroups
     var subgroups_chart5 = Object.keys(data_chart5[0]).slice(1);
 

@@ -39,7 +39,7 @@ var svg_chart1 = d3
     "translate(" + margin_chart1.left + "," + margin_chart1.top + ")"
   );
 
-d3.csv("/data/chart1.csv").then((data_chart1) => {
+d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
   // Set the color scale
   var color_chart1 = d3
     .scaleOrdinal()

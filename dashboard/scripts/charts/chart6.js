@@ -5,7 +5,7 @@ const renderChart6 = (country) => {
     button.classList.remove("alert-btn");
   }
 
-  d3.csv("/data/chart6.csv").then((data_chart6) => {
+  d3.csv("/dashboard/data/chart6.csv").then((data_chart6) => {
     // Default country
     let selectedCountry_chart6 = "IN";
     if (country) {

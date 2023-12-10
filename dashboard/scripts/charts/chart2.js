@@ -23,7 +23,7 @@ var svg_chart2 = d3
     "translate(" + margin_chart2.left + "," + margin_chart2.top + ")"
   );
 
-d3.csv("/data/chart2.csv").then((data_chart2) => {
+d3.csv("/dashboard/data/chart2.csv").then((data_chart2) => {
   data_chart2.forEach(function (d) {
     d.followers = +d.followers;
     d.likes = +d.likes;
