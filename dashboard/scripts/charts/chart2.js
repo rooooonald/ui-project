@@ -23,7 +23,7 @@ var svg_chart2 = d3
     "translate(" + margin_chart2.left + "," + margin_chart2.top + ")"
   );
 
-d3.csv("/dashboard/data/chart2.csv").then((data_chart2) => {
+d3.csv("/data/chart2.csv").then((data_chart2) => {
   data_chart2.forEach(function (d) {
     d.followers = +d.followers;
     d.likes = +d.likes;
@@ -39,7 +39,7 @@ d3.csv("/dashboard/data/chart2.csv").then((data_chart2) => {
     .attr("class", "text-md")
     .style("font-family", "var(--font-secondary)")
     .attr("transform", "translate(0," + height_chart2 + ")")
-    .call(d3.axisBottom(x_chart2));
+    .call(d3.axisBottom(x_chart2).ticks(5));
 
   // Add Y axis
   var y_chart2 = d3

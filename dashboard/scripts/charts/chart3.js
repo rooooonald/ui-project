@@ -2,7 +2,7 @@ const renderChart3 = () => {
   // Remove existing chart
   d3.select("#chart3").selectAll("*").remove();
 
-  d3.csv("/dashboard/data/chart3.csv").then((data_chart3) => {
+  d3.csv("/data/chart3.csv").then((data_chart3) => {
     // Chart dimensions
     const margin_chart3 = { top: 45, right: 60, bottom: 100, left: 60 };
     var width_chart3 = 460 - margin_chart3.left - margin_chart3.right;

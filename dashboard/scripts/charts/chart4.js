@@ -20,7 +20,7 @@ var svg_chart4 = d3
     "translate(" + margin_chart4.left + "," + margin_chart4.top + ")"
   );
 
-d3.csv("/dashboard/data/chart4.csv").then((data) => {
+d3.csv("/data/chart4.csv").then((data) => {
   var parseDate = d3.timeParse("%Y");
   // Add X axis --> it is a linear scale since "Year_chart4" is numeric
   var x_chart4 = d3
@@ -85,6 +85,7 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
     .data(Object.keys(data[0]).slice(1))
     .enter()
     .append("path")
+    .attr("class", "line_chart4")
     .attr("fill", "none")
     .attr("stroke", function (d) {
       return color_chart4(d);
@@ -141,10 +142,10 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
       return 18;
     })
     .attr("y1", function (d, i) {
-      return i * 20;
+      return i * 18;
     })
     .attr("y2", function (d, i) {
-      return i * 20;
+      return i * 18;
     })
     .style("stroke", function (d) {
       return color_chart4(d);
@@ -160,7 +161,7 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
       return 25;
     })
     .attr("y", function (d, i) {
-      return i * 20;
+      return i * 18;
     })
     .attr("dy", ".35em")
     .style("text-anchor", "start")
@@ -170,6 +171,31 @@ d3.csv("/dashboard/data/chart4.csv").then((data) => {
     })
     .attr("fill", function (d) {
       return color_chart4(d);
+    })
+    .attr("cursor", "pointer")
+    .on("mouseover", function (event_legend, d_legend) {
+      // Dim all lines except the one corresponding to the legend item
+      svg_chart4
+        .selectAll(".line_chart4")
+        .filter(function (d) {
+          return d !== d_legend;
+        })
+        .attr("opacity", 0.1);
+      // Highlight the corresponding line
+      svg_chart4
+        .selectAll(".line_chart4")
+        .filter(function (d) {
+          return d === d_legend;
+        })
+        .attr("stroke-width", 5);
+    })
+    // Add mouseout event listener to legend lines
+    .on("mouseout", function () {
+      // Reset the opacity and stroke-width of all lines
+      svg_chart4
+        .selectAll(".line_chart4")
+        .attr("opacity", 1)
+        .attr("stroke-width", 2);
     });
 
   // Add title

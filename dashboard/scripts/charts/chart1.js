@@ -39,7 +39,7 @@ var svg_chart1 = d3
     "translate(" + margin_chart1.left + "," + margin_chart1.top + ")"
   );
 
-d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
+d3.csv("/data/chart1.csv").then((data_chart1) => {
   // Set the color scale
   var color_chart1 = d3
     .scaleOrdinal()
@@ -118,11 +118,9 @@ d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
       .transition()
       .duration(500)
       .attr("d", arc_chart1)
-      .style("opacity", 0.9)
       .attr("stroke", "white")
       .style("stroke-width", "2px")
-      .style("stroke", "white")
-      .style("opacity", 0.9);
+      .style("stroke", "white");
   };
 
   // Create the donut chart
@@ -136,8 +134,8 @@ d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
       return color_chart1(d.data.label);
     })
     .attr("stroke", "white")
+    .attr("class", "chart1-slice")
     .style("stroke-width", "2px")
-    .style("opacity", 0.9)
     .attr("transform", `translate(200,100)`)
     .on("mouseover", mouseover_chart1)
     .on("mousemove", mousemove_chart1)
@@ -172,11 +170,7 @@ d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
     .attr("ry", 2)
     .style("fill", function (d) {
       return color_chart1(d.data.label);
-    })
-    .style("opacity", 0)
-    .transition()
-    .duration(1000)
-    .style("opacity", 1);
+    });
 
   legend_chart1
     .append("text")
@@ -189,11 +183,21 @@ d3.csv("/dashboard/data/chart1.csv").then((data_chart1) => {
     })
     .style("font-family", "Montserrat, sans-serif")
     .style("font-size", "10px")
-
-    .style("opacity", 0)
-    .transition()
-    .duration(1000)
-    .style("opacity", 1);
+    .attr("cursor", "pointer")
+    .on("mouseover", function (event_legend, d_legend) {
+      // Dim all  except the one corresponding to the legend item
+      svg_chart1
+        .selectAll(".chart1-slice")
+        .filter(function (d) {
+          return d.data.label !== d_legend.data.label;
+        })
+        .attr("opacity", 0.1);
+    })
+    // Add mouseout event listener to legend lines
+    .on("mouseout", function () {
+      // Reset the opacity and stroke-width of all lines
+      svg_chart1.selectAll(".chart1-slice").attr("opacity", 1);
+    });
 
   svg_chart1
     .append("text")

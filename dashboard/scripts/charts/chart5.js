@@ -27,7 +27,7 @@ const renderChart5 = () => {
       "translate(" + margin_chart5.left + "," + margin_chart5.top + ")"
     );
 
-  d3.csv("/dashboard/data/chart5.csv").then((data_chart5) => {
+  d3.csv("/data/chart5.csv").then((data_chart5) => {
     // List of subgroups
     var subgroups_chart5 = Object.keys(data_chart5[0]).slice(1);
 
@@ -111,6 +111,7 @@ const renderChart5 = () => {
       })
       .enter()
       .append("rect")
+      .attr("class", "chart5-bar")
       .attr("x", 0)
       .attr("y", function (d) {
         return (
@@ -189,6 +190,21 @@ const renderChart5 = () => {
       })
       .attr("fill", function (d) {
         return color_chart5(d);
+      })
+      .attr("cursor", "pointer")
+      .on("mouseover", function (event_legend, d_legend) {
+        // Dim all bars except the one corresponding to the legend item
+        svg_chart5
+          .selectAll(".chart5-bar")
+          .filter(function (d) {
+            return d.key !== d_legend;
+          })
+          .attr("opacity", 0.1);
+      })
+      // Add mouseout event listener to legend lines
+      .on("mouseout", function () {
+        // Reset the opacity and stroke-width of all lines
+        svg_chart5.selectAll(".chart5-bar").attr("opacity", 1);
       });
 
     svg_chart5
